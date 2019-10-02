@@ -1,4 +1,15 @@
+@font-face {
+	font-family: 'osaka';
+	src: url('font/Osaka-Mono-02.ttf') format("truetype");
+}
+@font-face {
+	font-family: 'glacial';
+	src: url('font/GlacialIndifference-Regular.otf') format("opentype");
+}
+
+
 body {
+    font-family: "glacial";
     background-color: #306850;
     color: #E0F8CF;
     font-size: 18px;
