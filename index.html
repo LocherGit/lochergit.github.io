@@ -40,6 +40,22 @@
         </div>  
         <div class="mainContainer">
             <p>Long forgotten world.</p>
+            <div id="payment" class="woocommerce-checkout-payment">
+			    <ul class="wc_payment_methods payment_methods methods">
+			        <li class="wc_payment_method payment_method_paypal_plus">
+	                    <input id="payment_method_paypal_plus" type="radio" class="input-radio" name="payment_method" value="paypal_plus" checked="checked" data-order_button_text="Jetzt kaufen" style="display: none;">
+	                    <label for="payment_method_paypal_plus">
+		                    PayPal, Lastschrift, Kreditkarte 	
+                        </label>
+			            <div class="payment_box payment_method_paypal_plus">
+			                <p>Bitte wähle eine Zahlungsart:</p>
+                            <div id="ppplus" class="paypalplus-paywall" data-config="{&quot;useraction&quot;:&quot;commit&quot;,&quot;showLoadingIndicator&quot;:true,&quot;approvalUrl&quot;:&quot;https:\/\/www.paypal.com\/cgi-bin\/webscr?cmd=_express-checkout&amp;token=EC-3N429626FH027330G&quot;,&quot;placeholder&quot;:&quot;ppplus&quot;,&quot;mode&quot;:&quot;live&quot;,&quot;country&quot;:&quot;DE&quot;,&quot;language&quot;:&quot;de_DE&quot;,&quot;buttonLocation&quot;:&quot;outside&quot;,&quot;showPuiOnSandbox&quot;:true}" style="height: 244px;">
+                                <iframe id="iframe_0.5173839582139408" allowtransparency="true" scrolling="no" style="height: 244px; border: none; width: 269px;"></iframe>
+                            </div>
+        		        </div>
+	                </li>
+		        </ul>
+            </div>
         </div>
     </body>
 </html>
