@@ -115,10 +115,12 @@ body {
 
 .project {
   flex: 1 0 calc(45% - 10px);
-  border: 2px dashed #e0f8cf;
+  border: 2px solid #e0f8cf;
   margin: 10px;
   padding-left: 10px;
   padding-right: 10px;
+  border-radius: 15px;
+  background-color: #2c3539;
 }
 
 .project a {
