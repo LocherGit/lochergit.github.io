@@ -7,6 +7,10 @@
   src: url("font/GlacialIndifference-Regular.otf") format("opentype");
 }
 
+* {
+  font-family: "glacial";
+}
+
 /* HEADER */
 
 header {
@@ -19,12 +23,12 @@ header img {
 }
 
 header ul {
-  height: 50px;
+  height: 55px;
   list-style-type: none;
   margin: 0;
   padding: 0;
   position: absolute;
-  bottom: -29px;
+  bottom: -31px;
   left: 50%;
   min-width: 570px;
   transform: translate(-50%, -50%);
@@ -66,29 +70,64 @@ header li a:hover {
   font-weight: 100;
 }
 
+/* FOOTER */
+
+footer {
+  text-align: center;
+  padding-top: 10px;
+}
+
 /* BODY */
 
 body {
   background-color: #306850;
   color: #e0f8cf;
   font-size: 18px;
-  font-family: monospace;
 }
 
 .mainContainer {
   width: 80%;
-  height: 100%;
   border-radius: 15px;
   margin: 0 auto;
   background-color: #071821;
-  padding: 10px;
+  padding: 0px 20px 20px 20px;
   border: 2px solid #e0f8cf;
+  text-align: justify;
 }
 
-/* FOOTER */
+.post h2 {
+  display: inline-block;
+}
 
-footer {
+.post .date {
+  padding-left: 20px;
+  font-style: italic;
+}
+
+/* index.html */
+.projects {
+  max-width: 100%;
   text-align: center;
-  font-size: 100%;
-  padding-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.project {
+  flex: 1 0 calc(45% - 10px);
+  border: 2px dashed #e0f8cf;
+  margin: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.project a {
+  color: inherit;
+  text-decoration: none;
+  width: 90%;
+}
+
+.project img {
+  width: inherit;
+  height: auto;
 }
