@@ -7,11 +7,25 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script>
+      /* Loading Partials */
       $(function() {
         var includes = $("[data-include]");
         jQuery.each(includes, function() {
           var file = "html_partials/" + $(this).data("include") + ".html";
           $(this).load(file);
+        });
+      });
+      /* Changing Content */
+      $(window).on("load", function() {
+        $(document).ready(function() {
+          $("#home").click(function() {
+            console.log("Home was clicked.");
+            $(".mainContainer").load("html_content/home.html");
+          });
+          $("#gbstudio").click(function() {
+            console.log("GBStudio was clicked.");
+            $(".mainContainer").load("html_content/home2.html");
+          });
         });
       });
     </script>
