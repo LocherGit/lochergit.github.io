@@ -5,35 +5,97 @@
     <meta name="author" content="Locher_Underscore" />
     <meta name="description" content="Locher's Github Pages" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+      $(function() {
+        var includes = $("[data-include]");
+        jQuery.each(includes, function() {
+          var file = "html_partials/" + $(this).data("include") + ".html";
+          $(this).load(file);
+        });
+      });
+    </script>
   </head>
   <body>
-    <header>
-      <div class="header">
-        <div>
-          <img src="img/logo.png" alt="locher_underscore_logo" />
-        </div>
-        <div class="title">
-          <h1>Locher_Underscore</h1>
-        </div>
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#news">GBStudio</a></li>
-          <li><a href="#contact">Transcripts</a></li>
-          <li><a href="#about">About</a></li>
-        </ul>
-      </div>
-    </header>
-
+    <header data-include="header"></header>
     <div class="mainContainer">
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid modi
-        quidem atque sed exercitationem sequi, optio aut nulla labore neque
-        debitis iste omnis magni. Blanditiis dolorum error voluptatum. Quibusdam
-        unde, vitae aliquam non nulla provident delectus cupiditate pariatur,
-        fugit, tenetur similique molestiae maxime adipisci doloribus enim et
-        animi aspernatur autem?
-      </p>
+      <div class="post">
+        <h2>Welcome to my Github Page!</h2>
+        <span class="date">- 21st December 2019</span>
+        <p>
+          After some meaningless pouting, I have decided to create this page to list off the things I've did in the past and also to have some kind of visual feedback of
+          the projects and dreams I have yet to fully realize. I would like to believe that this currently barren place will be filled over time, or quickly disposed of.
+          At least that's how it usually goes.
+        </p>
+        <br />
+      </div>
+      <hr />
+      <h2 style="text-align: center;">Github Repositories</h2>
+      <div class="projects">
+        <div class="project">
+          <h3>GBStudio: Demon & Blasphemer (2019)</h3>
+          <img src="https://raw.githubusercontent.com/locherunderscore/demon-blasphemer-gbstudio-/master/git_Title.jpg" alt="demon&blasphemer-image" />
+          <p>
+            Repositories:
+            <a href="https://github.com/locherunderscore/demon-blasphemer-gbstudio-"><strong>Prologue</strong></a
+            >/
+            <a href="https://github.com/locherunderscore/demon-blasphemer-ch1-gbstudio"><strong>Chapter 1</strong></a>
+          </p>
+          <p>
+            A retro gameboy game created via GB Studio. JRPG, turn-based combat, etc
+          </p>
+          <p>Tags: gamedev, gbstudio, pixelart, 8bit, gameboy</p>
+        </div>
+        <div class="project">
+          <a href="https://github.com/locherunderscore/demetori-fansite">
+            <h3>Website: Demetori Fansite (2017)</h3>
+            <img src="https://raw.githubusercontent.com/locherunderscore/demetori-fansite/master/git_demetori01.jpg" alt="demetori-fansite-image" />
+            <p>
+              A fansite for a doujin music group who are known for their Touhou music arrangement.
+            </p>
+            <p>
+              Tags: website, html, css
+            </p>
+          </a>
+        </div>
+        <div class="project">
+          <a href="https://github.com/locherunderscore/Heimweh">
+            <h3>Visual Novel: Heimweh (2016)</h3>
+            <img src="https://github.com/locherunderscore/Heimweh/raw/master/git_title.jpg" alt="heimweh-vn-image" />
+            <p>
+              A self-authored visual novel, created in order to document its development process via Ren'Py.
+            </p>
+            <p>
+              Tags: visualnovel, renpy, python
+            </p>
+          </a>
+        </div>
+        <div class="project">
+          <a href="https://github.com/locherunderscore/demetori-fansite">
+            <h3>Unreal Engine: Project Wallker (2019)</h3>
+            <img src="https://github.com/locherunderscore/projectWallker/raw/master/git_levelt1.jpg" alt="project-wallker-image" />
+            <p>
+              Group project, third person plattformer. Charging vectors to dash towards specific directions and clear obstacles.
+            </p>
+            <p>
+              Tags: gamedev, ue4
+            </p>
+          </a>
+        </div>
+        <div class="project">
+          <a href="https://github.com/locherunderscore/demetori-fansite">
+            <h3>Shopware: LocherCustomFilter (2019)</h3>
+            <img src="https://raw.githubusercontent.com/locherunderscore/LocherCustomFilter/master/lochercustomfilter.jpg" alt="shopware-customfilter-image" />
+            <p>
+              Customfilter for backend orders with unique filter-conditions for shopware 5
+            </p>
+            <p>
+              Tags: shopware, backend, php, javascript
+            </p>
+          </a>
+        </div>
+      </div>
     </div>
-    <footer>&copy; 2019 Locher_Underscore</footer>
+    <footer data-include="footer"></footer>
   </body>
 </html>
