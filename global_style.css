@@ -42,7 +42,7 @@ header ul {
 header .title {
   position: absolute;
   left: 50%;
-  top: 30%;
+  top: 40%;
   transform: translate(-50%, -50%);
   font-size: 150%;
   font-style: italic;
@@ -144,15 +144,18 @@ body {
 }
 
 #slideshow_parent {
-  width: 28%;
-  height: 40px;
+  width: 80%;
+  height: 24px;
   overflow: hidden;
   position: absolute;
   right: 0px;
   top: 0px;
-  margin-right: 10px;
+  margin-right: 10%;
+  border: 1px dotted #2c3539;
 }
 
 #slideshow_child {
   position: relative;
+  color: #86c06c;
+  letter-spacing: 0.5em;
 }
