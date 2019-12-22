@@ -6,6 +6,7 @@
     <meta name="description" content="Locher's Github Pages" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/slideshow.js"></script>
     <script>
       /* Loading Partials */
       $(function() {
@@ -18,19 +19,27 @@
       /* Changing Content */
       $(window).on("load", function() {
         $(document).ready(function() {
-          $("#home").click(function() {
+          $("#home_").click(function() {
             console.log("Home was clicked.");
             $(".mainContainer").load("html_content/home.html");
           });
-          $("#gbstudio").click(function() {
+          $("#gbstudio_").click(function() {
             console.log("GBStudio was clicked.");
+            $(".mainContainer").load("html_content/home2.html");
+          });
+          $("#transcripts_").click(function() {
+            console.log("Transcripts was clicked.");
+            $(".mainContainer").load("html_content/home2.html");
+          });
+          $("#about_").click(function() {
+            console.log("About was clicked.");
             $(".mainContainer").load("html_content/home2.html");
           });
         });
       });
     </script>
   </head>
-  <body>
+  <body onload="marqueeInit()">
     <header data-include="header"></header>
     <div class="mainContainer">
       <div class="post">

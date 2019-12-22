@@ -133,3 +133,26 @@ body {
   width: inherit;
   height: auto;
 }
+
+/* slideshow */
+
+#slideshow_proto {
+  position: absolute;
+  visibility: hidden;
+  height: auto;
+  max-width: inherit;
+}
+
+#slideshow_parent {
+  width: 28%;
+  height: 40px;
+  overflow: hidden;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  margin-right: 10px;
+}
+
+#slideshow_child {
+  position: relative;
+}
