@@ -138,17 +138,16 @@ body {
   position: absolute;
   visibility: hidden;
   height: auto;
-  max-width: inherit;
 }
 
 #slideshow_parent {
-  width: 80%;
+  width: 40%;
   height: 24px;
   overflow: hidden;
   position: absolute;
   right: 0px;
   top: 0px;
-  margin-right: 10%;
+  margin-right: 30%;
   border: 1px dotted #2c3539;
 }
 
@@ -156,4 +155,5 @@ body {
   position: relative;
   color: #86c06c;
   letter-spacing: 0.5em;
+  white-space: nowrap;
 }

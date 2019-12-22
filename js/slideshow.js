@@ -62,7 +62,7 @@ slideshow_messages[58] = "SMALL ASTEROID?!";
 slideshow_messages[59] = "NOT happening!";
 slideshow_messages[60] = "What the hell.";
 slideshow_messages[61] = "30 years old virgins are regarded as wizards!";
-slideshow_messages[62] = "'Blast it away with piss!";
+slideshow_messages[62] = "Blast it away with piss!";
 slideshow_messages[63] = "PERISH, YOU SQUARES!!";
 slideshow_messages[64] = "That... WAS A LIE!";
 slideshow_messages[65] = "Don't run yourself HOARSE!";
@@ -103,7 +103,7 @@ function newslideshow_messages() {
   var newString = slideshow_messages[Math.floor(Math.random() * slideshow_message_max)];
   marquee.html(newString);
   testArea.html(newString);
-  stringWidth = testArea.width();
+  stringWidth = testArea.width() * 2;
 }
 
 function marqueeUpdate() {
@@ -111,7 +111,7 @@ function marqueeUpdate() {
   lastTime = Date.now();
   marqueeX -= 0.12 * delta;
 
-  if (marqueeX < -stringWidth - 10) {
+  if (marqueeX < -stringWidth - 150) {
     marqueeX = $("#slideshow_child").width();
     newslideshow_messages();
   }
