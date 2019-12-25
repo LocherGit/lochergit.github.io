@@ -134,13 +134,13 @@ body {
 
 /* slideshow */
 
-#slideshow_proto {
+.slideshow_proto {
   position: absolute;
   visibility: hidden;
   height: auto;
 }
 
-#slideshow_parent {
+.slideshow_parent {
   width: 40%;
   height: 24px;
   overflow: hidden;
@@ -151,7 +151,7 @@ body {
   border: 1px dotted #2c3539;
 }
 
-#slideshow_child {
+.slideshow_child {
   position: relative;
   color: #86c06c;
   letter-spacing: 0.5em;
