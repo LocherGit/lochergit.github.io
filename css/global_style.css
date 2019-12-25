@@ -93,13 +93,8 @@ body {
   text-align: justify;
 }
 
-.post h2 {
-  display: inline-block;
-}
-
-.post .date {
-  padding-left: 20px;
-  font-style: italic;
+.mainContainer h2 {
+  text-align: center;
 }
 
 /* index.html */
@@ -132,15 +127,129 @@ body {
   height: auto;
 }
 
+/* index.html */
+.series {
+  max-width: 100%;
+  text-align: center;
+  border: 2px solid #e0f8cf;
+  margin: 10px;
+  border-radius: 20px;
+  background-color: #071821;
+}
+
+.transcripts_button {
+  cursor: pointer;
+  width: 100%;
+  border: 2px solid #e0f8cf;
+  border-radius: 15px;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  color: #e0f8cf;
+  background-color: #071821;
+}
+
+.transcripts_button h3 {
+  font-size: 20px;
+  letter-spacing: 0.5em;
+  font-weight: 800;
+}
+
+.locher .active,
+.locher .transcripts_button:hover {
+  background-color: #89cfef;
+  color: #071821;
+}
+
+.demon_blasphemer .active,
+.demon_blasphemer .transcripts_button:hover {
+  background-color: #306850;
+}
+
+.demon_brokenmen .active,
+.demon_brokenmen .transcripts_button:hover {
+  background-color: #685030;
+}
+
+.demon_dividedworld .active,
+.demon_dividedworld .transcripts_button:hover {
+  background-color: #505068;
+}
+
+.active h3,
+.transcripts_button:hover h3 {
+  font-size: 22px;
+}
+
+.panel {
+  border-radius: 15px;
+  background-color: #071821;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.25s ease-out;
+}
+
+.panel_content {
+  max-width: 80%;
+  padding-left: 10%;
+}
+
+.panel_content h4 {
+  font-size: 20px;
+  border-bottom: 1px solid #e0f8cf;
+}
+
+.panel_content p {
+  text-align: justify;
+}
+
+.panel_content ul {
+  padding: 0;
+}
+
+.panel_content li {
+  color: #e0f8cf;
+  position: relative;
+  list-style: none;
+  text-align: left;
+  border-bottom: 1px solid white;
+}
+
+.panel_content li.last_chapter {
+  border-bottom: none;
+}
+
+.panel_content li a {
+  text-decoration: none;
+  color: #e0f8cf;
+  padding: 15px 0;
+  display: block;
+}
+
+.panel_content li:after {
+  background-color: black;
+}
+
+.panel_content li span {
+  font-size: 16px;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
 /* slideshow */
 
-.slideshow_proto {
+#slideshow_proto {
   position: absolute;
   visibility: hidden;
   height: auto;
 }
 
-.slideshow_parent {
+#slideshow_parent {
   width: 40%;
   height: 24px;
   overflow: hidden;
@@ -151,7 +260,7 @@ body {
   border: 1px dotted #2c3539;
 }
 
-.slideshow_child {
+#slideshow_child {
   position: relative;
   color: #86c06c;
   letter-spacing: 0.5em;

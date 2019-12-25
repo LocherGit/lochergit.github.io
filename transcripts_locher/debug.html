@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <title>Locher_Underscore</title>
+    <link rel="stylesheet" type="text/css" href="../css/global_style.css" />
+    <meta name="author" content="Locher_Underscore" />
+    <meta name="description" content="Locher's Github Pages" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+      /* Loading Partials */
+      $(function() {
+        var includes = $("[data-include]");
+        jQuery.each(includes, function() {
+          var file = "../html_partials/" + $(this).data("include") + ".html";
+          $(this).load(file);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <header data-include="header"></header>
+    <div class="mainContainer">
+      Test
+    </div>
+    <footer data-include="footer"></footer>
+  </body>
+</html>

@@ -92,10 +92,12 @@ var marqueeX, marquee, testArea, stringWidth, lastTime;
 
 function marqueeInit() {
   console.log("Slideshow marqueeInit");
-  marquee = $(".slideshow_child");
+  marquee = $("#slideshow_child");
+  var debug = document.getElementById("slideshow_child");
   marqueeX = marquee.width();
   console.log(marquee);
-  testArea = $(".slideshow_proto");
+  console.log(debug);
+  testArea = $("#slideshow_proto");
   newslideshow_messages();
   lastTime = Date.now();
   setInterval("marqueeUpdate()", 15);
@@ -117,7 +119,7 @@ function marqueeUpdate() {
   marqueeX = marqueeX - 0.12 * delta;
 
   if (marqueeX < -stringWidth - 150) {
-    marqueeX = $(".slideshow_child").width();
+    marqueeX = $("#slideshow_child").width();
     newslideshow_messages();
   }
 
