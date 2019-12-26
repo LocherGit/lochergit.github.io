@@ -387,8 +387,11 @@ body {
   transition: 0.5s;
 }
 
-.sidenav {
-  padding-top: 50%;
+#off_canvas .sidenav {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 #off_canvas a {
