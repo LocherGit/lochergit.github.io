@@ -163,23 +163,23 @@ body {
 }
 
 .locher .active,
-.locher .transcripts_button:hover {
+.mainContainer .locher .transcripts_button:hover {
   background-color: #89cfef;
   color: #071821;
 }
 
 .demon_blasphemer .active,
-.demon_blasphemer .transcripts_button:hover {
+.mainContainer .demon_blasphemer .transcripts_button:hover {
   background-color: #306850;
 }
 
 .demon_brokenideals .active,
-.demon_brokenideals .transcripts_button:hover {
+.mainContainer .demon_brokenideals .transcripts_button:hover {
   background-color: #685030;
 }
 
 .demon_dividedworld .active,
-.demon_dividedworld .transcripts_button:hover {
+.mainContainer .demon_dividedworld .transcripts_button:hover {
   background-color: #505068;
 }
 
