@@ -183,6 +183,11 @@ body {
   background-color: #505068;
 }
 
+.mainContainer .series > button:not([class*="active"]) {
+  color: #e0f8cf;
+  background-color: #071821;
+}
+
 .active h3,
 .transcripts_button:hover h3 {
   font-size: 22px;
