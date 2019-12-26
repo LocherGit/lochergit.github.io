@@ -369,7 +369,7 @@ body {
 
 /* MOBILE OFF-CANVAS MENU CONSIDERATION */
 
-.sidenav {
+#off_canvas {
   font-size: 30px;
   height: 100%;
   width: 0;
@@ -380,10 +380,13 @@ body {
   background-color: #071821;
   overflow-x: hidden;
   transition: 0.5s;
+}
+
+.sidenav {
   padding-top: 50%;
 }
 
-.sidenav a {
+#off_canvas a {
   padding: 20px;
   text-decoration: none;
   color: #e0f8cf;
@@ -392,20 +395,20 @@ body {
   text-align: center;
 }
 
-.sidenav a:hover {
+#off_canvas a:hover {
   color: white;
   font-size: 30px;
 }
 
-.sidenav .closebtn {
+#off_canvas .closebtn {
   position: absolute;
   left: 50%;
-  bottom: 20%;
+  bottom: 0%;
   transform: translate(-50%, 0%);
   font-size: 80px;
 }
 
-.sidenav .navtitle {
+#off_canvas .navtitle {
   padding: 20px;
   font-size: 35px;
   border-bottom: 2px solid #e0f8cf;

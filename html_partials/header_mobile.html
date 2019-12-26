@@ -4,23 +4,25 @@
 <div class="mobile_canvas">
   <button type="button" class="menu_icon__open" onclick="openNav()"><span></span> <span></span> <span></span></button>
 </div>
-<div id="mySidenav" class="sidenav">
-  <div class="navtitle">Locher_Underscore</div>
-  <a href="/index.html">Home</a>
-  <a href="/gbstudio.html">GBStudio</a>
-  <a href="/transcripts.html">Transcripts</a>
-  <a href="/about.html">About</a>
+<div id="off_canvas">
+  <div class="sidenav">
+    <div class="navtitle">Locher_Underscore</div>
+    <a href="/index.html">Home</a>
+    <a href="/gbstudio.html">GBStudio</a>
+    <a href="/transcripts.html">Transcripts</a>
+    <a href="/about.html">About</a>
+  </div>
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 </div>
 
 <script>
   function openNav() {
     $(".menu_icon__open").addClass("active");
-    document.getElementById("mySidenav").style.width = "100%";
+    document.getElementById("off_canvas").style.width = "100%";
   }
 
   function closeNav() {
     $(".menu_icon__open").removeClass("active");
-    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("off_canvas").style.width = "0";
   }
 </script>
