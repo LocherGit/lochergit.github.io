@@ -1,26 +1,42 @@
+---
+permalink: transcripts/demon-blasphemer/ch0
+---
+
+<!DOCTYPE html>
 <html>
   <head>
-    <title>Locher_Underscore</title>
-    <link rel="stylesheet" type="text/css" href="../css/global_style.css" />
+    <title>The Demon and the Blasphemer - Chapter 0</title>
+    <link rel="stylesheet" type="text/css" href="/css/global_style.css" />
+    <link rel="icon" href="/favicon.ico" type="image/vnd.microsoft.icon" />
     <meta name="author" content="Locher_Underscore" />
-    <meta name="description" content="Locher's Github Pages" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/showdown/dist/showdown.min.js"></script>
     <script>
       /* Loading Partials */
       $(function() {
         var includes = $("[data-include]");
         jQuery.each(includes, function() {
-          var file = "../html_partials/" + $(this).data("include") + ".html";
+          var file = "/html_partials/" + $(this).data("include") + ".html";
           $(this).load(file);
         });
       });
     </script>
   </head>
-  <body>
+  <body class="transcripts">
     <header data-include="header"></header>
+    <header data-include="header_mobile"></header>
     <div class="mainContainer">
-      Test
+      <!-- prettier-ignore -->
+      <div id="markdown">
+      </div>
+      <script>
+        var converter = new showdown.Converter(),
+          text = "# hello, markdown!",
+          html = converter.makeHtml(text);
+        document.getElementById("markdown").innerHTML = html;
+      </script>
     </div>
     <footer data-include="footer"></footer>
   </body>

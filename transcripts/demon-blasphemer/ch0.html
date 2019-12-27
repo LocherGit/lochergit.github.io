@@ -12,6 +12,8 @@ permalink: transcripts/demon-blasphemer/ch0
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@webcomponents/webcomponentsjs@2/webcomponents-loader.min.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@1/src/zero-md.min.js"></script>
     <script>
       /* Loading Partials */
       $(function() {
@@ -27,24 +29,9 @@ permalink: transcripts/demon-blasphemer/ch0
     <header data-include="header"></header>
     <header data-include="header_mobile"></header>
     <div class="mainContainer">
-      <!-- prettier-ignore -->
-      <xmp theme="united" style="display:none;">
-        # Markdown text goes in here
-
-        ## Chapter 1
-        
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-        et dolore magna aliqua. 
-        
-        ## Chapter 2
-        
-        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-        aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-        culpa qui officia deserunt mollit anim id est laborum.
-      </xmp>
-      <script src="http://strapdownjs.com/v/0.2/strapdown.js"></script>
+      <zero-md css-urls='["/css/transcripts_style.css"]' src="/transcripts/demon-blasphemer/ch0.md"></zero-md>
     </div>
     <footer data-include="footer"></footer>
+    <a href="#top" class="to-top" style="display: inline;">&#8593;</a>
   </body>
 </html>
