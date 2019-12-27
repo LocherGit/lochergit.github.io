@@ -292,6 +292,10 @@ body {
     margin-bottom: 8px;
   }
 
+  header img {
+    height: 50px;
+  }
+
   .mainContainer {
     width: auto;
     padding: 0;

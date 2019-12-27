@@ -1,0 +1,34 @@
+---
+permalink: transcripts/demon-blasphemer/ch0
+---
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>The Demon and the Blasphemer - Chapter 0</title>
+    <link rel="stylesheet" type="text/css" href="/css/global_style.css" />
+    <link rel="icon" href="/favicon.ico" type="image/vnd.microsoft.icon" />
+    <meta name="author" content="Locher_Underscore" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+      /* Loading Partials */
+      $(function() {
+        var includes = $("[data-include]");
+        jQuery.each(includes, function() {
+          var file = "../../html_partials/" + $(this).data("include") + ".html";
+          $(this).load(file);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <header data-include="header"></header>
+    <header data-include="header_mobile"></header>
+    <div class="mainContainer">
+      Test
+    </div>
+    <footer data-include="footer"></footer>
+  </body>
+</html>
