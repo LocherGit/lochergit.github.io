@@ -91,12 +91,9 @@ slideshow_messages[86] = "My controls are as follows!";
 var marqueeX, marquee, testArea, stringWidth, lastTime;
 
 function marqueeInit() {
-  console.log("Slideshow marqueeInit");
   marquee = $("#slideshow_child");
   var debug = document.getElementById("slideshow_child");
   marqueeX = marquee.width();
-  console.log(marquee);
-  console.log(debug);
   testArea = $("#slideshow_proto");
   newslideshow_messages();
   lastTime = Date.now();
@@ -104,13 +101,10 @@ function marqueeInit() {
 }
 
 function newslideshow_messages() {
-  console.log("Slideshow newslideshow_messages");
   var newString = slideshow_messages[Math.floor(Math.random() * slideshow_message_max)];
-  console.log(newString);
   marquee.html(newString);
   testArea.html(newString);
   stringWidth = testArea.width() * 2;
-  console.log("Slideshow newslideshow_messages complete: " + testArea.width());
 }
 
 function marqueeUpdate() {
