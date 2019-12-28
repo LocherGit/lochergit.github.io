@@ -95,6 +95,12 @@ footer > a {
   border: 2px solid #e0f8cf;
   border-radius: 15px;
   background: #306850;
+  transition: all 0.25s ease-out;
+}
+
+footer > a:hover {
+  font-size: 2.5em;
+  transition: all 0.25s ease-in;
 }
 
 /* Desktop consideration */
@@ -110,5 +116,8 @@ footer > a {
   }
   footer > a {
     font-size: 2.5em;
+  }
+  footer > a:hover {
+    font-size: 3em;
   }
 }
