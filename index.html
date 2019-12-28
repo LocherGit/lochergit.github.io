@@ -1,75 +1,59 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Locher_Home</title>
-    <link rel="stylesheet" type="text/css" href="/css/global_style.css" />
+    <title>Locher_Underscore</title>
+    <link rel="stylesheet" type="text/css" href="/css/home_style.css" />
     <link rel="icon" href="/img/favicon.ico" type="image/x-icon" />
     <meta name="author" content="Locher_Underscore" />
-    <meta name="description" content="Locher's Github Pages" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="/js/loading_partials.js"></script>
-    <script src="/js/slideshow.js"></script>
+    <script src="https://code.iconify.design/1/1.0.3/iconify.min.js"></script>
+    <script>
+      $("#discord").bind("touchstart", function() {
+        alert("Locher#0170");
+      });
+    </script>
   </head>
-  <body onload="marqueeInit()">
-    <header data-include="header"></header>
-    <header data-include="header_mobile"></header>
-    <div id="top" class="mainContainer">
-      <div class="post">
-        <h2>Welcome to my Github Page!</h2>
-        <p>
-          After some meaningless pouting, I have decided to create this page to list off the things I've did in the past and also to have some kind of visual feedback of
-          the projects and dreams I have yet to fully realize. I would like to believe that this currently barren place will be filled over time, or quickly disposed of.
-          At least that's how it usually goes.
-        </p>
-        <br />
-      </div>
-      <hr />
-      <h2>Github Repositories</h2>
-      <div class="projects">
-        <div class="project">
-          <a href="https://github.com/locherunderscore/demon-blasphemer-gbstudio-">
-            <h3>GBStudio: Demon & Blasphemer [Prologue ver.] (2019)</h3>
-            <img src="https://raw.githubusercontent.com/locherunderscore/demon-blasphemer-gbstudio-/master/git_Title.jpg" alt="demon&blasphemer-image" />
-            <p>A short retro gameboy game created via GB Studio. JRPG, turn-based combat, etc...</p>
-            <p>Tags: gamedev, gbstudio, pixelart, 8bit, narrative</p>
+  <body>
+    <header>
+      <h1>Locher_Underscore</h1>
+      <h2>Ton That Ngoc</h2>
+      <ul class="profile-list">
+        <li>
+          <a href="mailto:ngoc.ton@gmx.de" target="_blank" title="GMX Mail">
+            <i class="iconify" data-icon="icomoon-free:mail" data-inline="false">
+              <span class="screen-reader">Mail: ngoc.ton@gmx.de</span>
+            </i>
           </a>
-        </div>
-        <div class="project">
-          <a href="https://github.com/locherunderscore/demetori-fansite">
-            <h3>Website: Demetori Fansite (2017)</h3>
-            <img src="https://raw.githubusercontent.com/locherunderscore/demetori-fansite/master/git_demetori01.jpg" alt="demetori-fansite-image" />
-            <p>A fansite for a doujin music group who are known for their Touhou music arrangement.</p>
-            <p>Tags: website, html, css</p>
+        </li>
+        <li>
+          <a href="https://github.com/locherunderscore/" target="_blank" title="Github">
+            <i class="iconify" data-icon="zmdi:github-box" data-inline="false">
+              <span class="screen-reader">Github: Locher Underscore</span>
+            </i>
           </a>
-        </div>
-        <div class="project">
-          <a href="https://github.com/locherunderscore/Heimweh">
-            <h3>Visual Novel: Heimweh (2016)</h3>
-            <img src="https://github.com/locherunderscore/Heimweh/raw/master/git_title.jpg" alt="heimweh-vn-image" />
-            <p>A self-authored visual novel, created in order to document its development process via Ren'Py.</p>
-            <p>Tags: visualnovel, renpy, python, narrative</p>
+        </li>
+        <li>
+          <a href="#" id="discord" data-toggle="tooltip" title="Locher#0170">
+            <i class="iconify" data-icon="simple-icons:discord" data-inline="false">
+              <span class="screen-reader">Discord: Locher#0170</span>
+            </i>
           </a>
-        </div>
-        <div class="project">
-          <a href="https://github.com/locherunderscore/demetori-fansite">
-            <h3>Unreal Engine: Project Wallker (2019)</h3>
-            <img src="https://github.com/locherunderscore/projectWallker/raw/master/git_levelt1.jpg" alt="project-wallker-image" />
-            <p>Group project, third person plattformer. Charging vectors to dash toward specific directions and clear obstacles.</p>
-            <p>Tags: gamedev, ue4</p>
+        </li>
+        <li>
+          <a href="https://locher.itch.io/" target="_blank" title="Itch.io">
+            <i class="iconify" data-icon="fa-brands:itch-io" data-inline="false">
+              <span class="screen-reader">Itch.io</span>
+            </i>
           </a>
-        </div>
-        <div class="project">
-          <a href="https://github.com/locherunderscore/demetori-fansite">
-            <h3>Shopware: LocherCustomFilter (2019)</h3>
-            <img src="https://raw.githubusercontent.com/locherunderscore/LocherCustomFilter/master/lochercustomfilter.jpg" alt="shopware-customfilter-image" />
-            <p>Customfilter of backend orders with unique filter-conditions for shopware 5</p>
-            <p>Tags: shopware, backend, php, javascript</p>
-          </a>
-        </div>
-      </div>
-    </div>
-    <footer data-include="footer"></footer>
+        </li>
+      </ul>
+    </header>
+    <footer>
+      <a href="/home">
+        <span>Enter</span>
+      </a>
+    </footer>
   </body>
 </html>
