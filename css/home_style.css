@@ -13,15 +13,7 @@
 }
 
 /* Content */
-
-html,
-body {
-  height: 100%;
-  width: 100%;
-}
-
 header {
-  padding: 1% 5%;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -32,12 +24,12 @@ header {
 h1 {
   transition: all 0.2s ease-in-out;
   margin: 10px;
-  font-size: 2.5em;
+  font-size: 35px;
 }
 
 h2 {
   transition: all 0.35s ease-in-out;
-  font-size: 2em;
+  font-size: 26px;
   margin: 0 0 1em 0;
 }
 
@@ -49,7 +41,7 @@ ul {
 li {
   transition: all 0.5s ease-in-out;
   display: inline-block;
-  font-size: 3em;
+  font-size: 30px;
   list-style: none;
   vertical-align: bottom;
   margin: 10px;
@@ -89,7 +81,7 @@ span {
 }
 
 footer > a {
-  font-size: 2em;
+  font-size: 26px;
   text-transform: uppercase;
   padding: 10px;
   border: 2px solid #e0f8cf;
@@ -99,25 +91,55 @@ footer > a {
 }
 
 footer > a:hover {
-  font-size: 2.5em;
+  font-size: 35px;
   transition: all 0.25s ease-in;
 }
 
-/* Desktop consideration */
-@media screen and (min-width: 992px) {
+/* low-res tablets, mobile landscape */
+@media (min-width: 481px) and (max-width: 767px) {
   h1 {
-    font-size: 6em;
+    font-size: 40px;
   }
-  h2 {
-    font-size: 3em;
-  }
+  h2,
   li {
-    font-size: 5em;
+    font-size: 30px;
   }
   footer > a {
-    font-size: 2.5em;
+    font-size: 20px;
   }
   footer > a:hover {
-    font-size: 3em;
+    font-size: 25px;
+  }
+}
+
+/* tablets + ipads landscape */
+@media (min-width: 768px) and (max-width: 1024px) {
+  h1 {
+    font-size: 55px;
+  }
+  h2,
+  li {
+    font-size: 40px;
+  }
+  footer > a {
+    font-size: 30px;
+  }
+  footer > a:hover {
+    font-size: 35px;
+  }
+}
+
+/* desktop */
+@media (min-width: 1025px) {
+  h1 {
+    font-size: 55px;
+  }
+  h2,
+  li,
+  footer > a {
+    font-size: 40px;
+  }
+  footer > a:hover {
+    font-size: 45px;
   }
 }
