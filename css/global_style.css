@@ -274,6 +274,24 @@ body {
   border: 2px solid #e0f8cf;
   color: #e0f8cf;
   line-height: 3;
+  opacity: 0.5;
+  -webkit-transition: opacity 500ms ease-out;
+  -moz-transition: opacity 500ms ease-out;
+  -o-transition: opacity 500ms ease-out;
+  transition: opacity 500ms ease-out;
+}
+
+.to-top a:hover {
+  opacity: 1;
+  -webkit-transition: opacity 500ms ease-out;
+  -moz-transition: opacity 500ms ease-out;
+  -o-transition: opacity 500ms ease-out;
+  transition: opacity 500ms ease-out;
+}
+
+.to-top a#prev_chapter:hover,
+.to-top a#next_chapter:hover {
+  opacity: 1 !important;
 }
 
 /* slideshow */
