@@ -4,8 +4,8 @@ $(function() {
     if ($(window).scrollTop() >= $("#footer").offset().top - $(window).height() || $(window).scrollTop() <= 50) {
       document.getElementById("prev_chapter").style.pointerEvents = "auto";
       document.getElementById("next_chapter").style.pointerEvents = "auto";
-      document.getElementById("prev_chapter").style.opacity = "0.5";
-      document.getElementById("next_chapter").style.opacity = "0.5";
+      document.getElementById("prev_chapter").style.opacity = "1";
+      document.getElementById("next_chapter").style.opacity = "1";
       document.getElementById("prev_chapter").style.transition = "opacity 1s";
       document.getElementById("next_chapter").style.transition = "opacity 1s";
       document.getElementById("prev_chapter").style.display = "inline";
