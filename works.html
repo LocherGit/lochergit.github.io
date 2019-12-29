@@ -1,17 +1,18 @@
 ---
-permalink: projects/
+permalink: works/
 ---
 
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Locher_Projects</title>
+    <title>Locher_Works</title>
     <link rel="stylesheet" type="text/css" href="/css/global_style.css" />
     <link rel="icon" href="/img/favicon.ico" type="image/x-icon" />
     <meta name="author" content="Locher_Underscore" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://code.iconify.design/1/1.0.3/iconify.min.js"></script>
     <script src="/js/loading_partials.js"></script>
     <script src="/js/slideshow.js"></script>
   </head>
@@ -19,7 +20,9 @@ permalink: projects/
     <header data-include="header"></header>
     <header data-include="header_mobile"></header>
     <div id="top" class="mainContainer">
-      <h2>Github Repositories</h2>
+      <h2 id="github">
+        <a href="#top" title="Jump to TOP"><i class="iconify" data-icon="ic:twotone-keyboard-arrow-up" data-inline="false"></i></a> Github Repositories <a href="#music" title="Jump to MUSIC"><i class="iconify" data-icon="ic:twotone-keyboard-arrow-down" data-inline="false"></i></a>
+      </h2>
       <div class="projects">
         <div class="project">
           <a href="https://github.com/locherunderscore/demon-blasphemer-gbstudio-">
@@ -62,7 +65,20 @@ permalink: projects/
           </a>
         </div>
       </div>
+      <hr>
+      <h2 id="music">
+        <a href="#github" title="Jump to GITHUB"><i class="iconify" data-icon="ic:twotone-keyboard-arrow-up" data-inline="false"></i></a> Musical Works <a href="#footer" title="Jump to FOOTER"><i class="iconify" data-icon="ic:twotone-keyboard-arrow-down" data-inline="false"></i></a>
+      </h2>
+      <div class="projects">
+        <div class="project">
+          <a href="https://soundcloud.com/djlocher/schnuller-aus-baumkuchen-feat-prince-vince">
+            <h3>Soundcloud: [DJ Locher] - Ein Schnuller aus Baumkuchen</h3>
+            <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/333554254&color=%2386c06c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+            <p>Musical composition, with guest-guitarrist <a href="https://www.instagram.com/vincetofuna/">Prince Vince</a> and mastered by <a href="https://twitter.com/ChezyGH3">AshMadeOurEyes</a>.</p>
+            <p>Genre: indie, parody, ethno-pop</p>
+          </a>
+        </div>
     </div>
-    <footer data-include="footer"></footer>
+    <footer id="footer" data-include="footer"></footer>
   </body>
 </html>
