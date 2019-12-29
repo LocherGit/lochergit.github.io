@@ -10,11 +10,19 @@ $(function() {
       document.getElementById("next_chapter").style.transition = "opacity 1s";
       document.getElementById("prev_chapter").style.display = "inline";
       document.getElementById("next_chapter").style.display = "inline";
+      if ($(window).scrollTop() >= $("#footer").offset().top - $(window).height()) {
+        document.getElementById("to-top").style.transition = "opacity 1s";
+        document.getElementById("to-top").style.display = "inline";
+        document.getElementById("to-top").style.opacity = "1";
+        document.getElementById("to-top").style.pointerEvents = "none";
+      }
     } else {
       document.getElementById("prev_chapter").style.opacity = "0.0";
       document.getElementById("next_chapter").style.opacity = "0.0";
+      document.getElementById("to-top").style.opacity = "0.0";
       document.getElementById("prev_chapter").style.pointerEvents = "none";
       document.getElementById("next_chapter").style.pointerEvents = "none";
+      document.getElementById("to-top").style.pointerEvents = "none";
     }
   });
 });
