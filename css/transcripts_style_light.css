@@ -1,13 +1,14 @@
 /* transcripts - markdown styling */
 * {
   margin-bottom: 40px;
-  color: #e0f8cf !important;
   line-height: 2;
   padding: 10px;
+  color: #071821 !important;
 }
 
 h1 {
   text-align: center;
+  margin-top: 0;
 }
 
 p {
