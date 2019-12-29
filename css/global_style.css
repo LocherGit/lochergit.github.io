@@ -9,6 +9,14 @@
   font-family: "Glacial", monospace, Verdana, Arial;
 }
 
+a {
+  color: #86c06c;
+}
+
+a:hover {
+  color: #306850;
+}
+
 /* HEADER */
 
 [data-include="header"] {
@@ -104,7 +112,33 @@ body {
   text-align: center;
 }
 
-/* index.html */
+hr {
+  color: #e0f8cf;
+  margin-block-start: 2em;
+  margin-block-end: 2em;
+  width: 60%;
+}
+
+/* home */
+.home {
+  text-align: center;
+}
+
+.home p {
+  padding: 10px 25%;
+  font-size: 20px;
+  line-height: 1.5em;
+}
+
+.home span {
+  color: #86c06c;
+}
+
+.home h2:hover {
+  text-decoration: underline;
+}
+
+/* projects.html */
 .projects {
   max-width: 100%;
   text-align: center;
@@ -223,7 +257,7 @@ body {
   position: relative;
   list-style: none;
   text-align: left;
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid #e0f8cf;
 }
 
 .panel_content li.last_chapter {
@@ -264,9 +298,8 @@ body {
 }
 
 .to-top a {
-  padding: 2px 13px 2px 13px;
+  padding: 6px 6px 0 6px;
   margin: 10px;
-  text-decoration: none;
   cursor: pointer;
   background: #306850;
   border-radius: 15px;
@@ -316,7 +349,6 @@ body {
   right: 0;
   margin: 8px;
   padding: 5px;
-  max-height: 50px;
   height: 36px;
   border-radius: 15px;
   cursor: pointer;
@@ -379,8 +411,17 @@ body {
     padding: 0;
   }
 
-  .post {
+  .post,
+  .home {
     margin: 10px;
+  }
+
+  hr {
+    width: 80%;
+  }
+
+  .home p {
+    padding: 10px;
   }
 
   .transcripts_button h3 {
