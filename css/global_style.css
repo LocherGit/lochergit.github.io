@@ -158,13 +158,12 @@ hr {
 }
 
 .project a {
-  color: inherit;
   text-decoration: none;
   width: 90%;
 }
 
 .project img {
-  width: inherit;
+  width: 90%;
   height: auto;
 }
 
