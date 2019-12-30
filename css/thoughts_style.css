@@ -52,15 +52,6 @@ li {
   width: 90%;
 }
 
-.thoughts_earth {
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, 0);
-  top: 100%;
-  overflow-y: hidden;
-  margin-top: 100px;
-}
-
 img {
   width: 200px;
   height: 200px;
@@ -83,7 +74,7 @@ img {
 .back_to_reality {
   position: absolute;
   left: 50%;
-  transform: translate(-50%, 50px);
+  transform: translate(-50%, 75px);
   z-index: 1;
   text-decoration: none;
 }
@@ -93,6 +84,12 @@ img {
   background: #306850;
   border-radius: 15px;
   border: 2px solid #e0f8cf;
+  transition: ease-out 0.5s;
+}
+
+.back_to_reality span:hover {
+  font-size: 20px;
+  transition: ease-in 0.5s;
 }
 
 /* Thoughts - markdown */
@@ -114,8 +111,16 @@ img {
     font-size: 35px;
   }
 
+  .back_to_reality {
+    transform: translate(-50%, 150px);
+  }
+
   .back_to_reality span {
-    font-size: 30px;
+    font-size: 40px;
+  }
+
+  .back_to_reality span:hover {
+    font-size: 45px;
   }
 
   img {
