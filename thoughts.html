@@ -1,0 +1,37 @@
+---
+permalink: thoughts/
+---
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Locher_Thoughts</title>
+    <link rel="stylesheet" type="text/css" href="/css/thoughts_style.css" />
+    <link rel="icon" href="/img/favicon.ico" type="image/x-icon" />
+    <meta name="author" content="Locher_Underscore" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+      function hover(opacity) {
+        document.getElementById("button").style.opacity = opacity;
+        document.getElementById("earth").style.opacity = opacity;
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Fleeting Thoughts</h1>
+    <div class="thoughts_container">
+      <ul>
+        <li><a href="/thoughts/sense-for-visual-aesthetics">Sense for visual aesthetics</a></li>
+      </ul>
+    </div>
+    <footer>
+      <a class="back_to_reality" href="/home" onmouseenter="hover('1')" onmouseleave="hover('0.5')">
+        <span id="button">Back to Reality</span>
+      </a>
+      <img id="earth" src="/img/earth.png" alt="spinning-earth" onmouseenter="hover('1')" onmouseleave="hover('0.5')" />
+    </footer>
+    <div></div>
+  </body>
+</html>

@@ -14,3 +14,9 @@ p {
   font-size: 20px;
   text-align: left;
 }
+
+em {
+  color: #86c06c;
+  font-style: normal;
+  padding: 0;
+}

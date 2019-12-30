@@ -43,7 +43,7 @@ header ul {
   position: absolute;
   bottom: -31px;
   left: 50%;
-  min-width: 570px;
+  min-width: 476px;
   transform: translate(-50%, -50%);
   border-radius: 15px;
   border: 2px solid #e0f8cf;
@@ -58,7 +58,6 @@ header .title {
   top: 40%;
   transform: translate(-50%, -50%);
   font-size: 150%;
-  font-style: italic;
 }
 
 header li {
@@ -81,6 +80,26 @@ header li a:hover {
   border-radius: 15px;
   color: white;
   font-weight: 100%;
+}
+
+.thoughts {
+  height: 90px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+  font-size: 150%;
+  letter-spacing: 0.2em;
+  top: 150px;
+  margin-left: 325px;
+}
+
+.invisible {
+  opacity: 0;
+}
+
+.thoughts_padding {
+  padding: 12px;
 }
 
 /* FOOTER */

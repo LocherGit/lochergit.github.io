@@ -1,0 +1,129 @@
+/* Font */
+
+@font-face {
+  font-family: "Glacial";
+  src: url("../font/GlacialIndifference-Regular.otf") format("opentype");
+}
+
+* {
+  font-family: "Glacial", monospace, Verdana, Arial;
+  text-align: center;
+  color: #e0f8cf;
+}
+
+h1 {
+  letter-spacing: 5px;
+  font-weight: 100;
+  text-decoration-line: underline;
+  text-decoration-style: wavy;
+  text-decoration-color: forestgreen;
+}
+
+body {
+  background-color: #071821;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+.thoughts_container a {
+  font-size: 20px;
+  text-decoration: none;
+  transition: ease-out 0.5s;
+}
+
+.thoughts_container a:hover {
+  font-size: 25px;
+  transition: ease-in 0.5s;
+  color: #86c06c;
+}
+
+/* thoughts */
+.thoughts_container {
+  background: url(/img/thoughts.png) no-repeat;
+  background-size: 100% 100%;
+  padding: 10% 15px 25% 15px;
+  margin: 0 auto 15px auto;
+  width: 90%;
+}
+
+.thoughts_earth {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  top: 100%;
+  overflow-y: hidden;
+  margin-top: 100px;
+}
+
+img {
+  width: 200px;
+  height: 200px;
+  animation-name: spin;
+  animation-duration: 120s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  opacity: 0.5;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.back_to_reality {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 50px);
+  z-index: 1;
+  text-decoration: none;
+}
+
+.back_to_reality span {
+  padding: 10px;
+  background: #306850;
+  border-radius: 15px;
+  border: 2px solid #e0f8cf;
+}
+
+/* Thoughts - markdown */
+.thoughts {
+  width: 100%;
+  margin: 8px auto;
+}
+
+@media screen and (min-width: 993px) {
+  .thoughts_container {
+    width: 50%;
+  }
+
+  .thoughts_container a {
+    font-size: 30px;
+  }
+
+  .thoughts_container a:hover {
+    font-size: 35px;
+  }
+
+  .back_to_reality span {
+    font-size: 30px;
+  }
+
+  img {
+    width: 400px;
+    height: 400px;
+  }
+
+  .thoughts {
+    width: 60%;
+  }
+}
