@@ -10,7 +10,8 @@ h1 {
   margin-top: 0;
 }
 
-p {
+p,
+li {
   font-size: 20px;
   text-align: left;
 }
@@ -18,5 +19,18 @@ p {
 em {
   color: #86c06c;
   font-style: normal;
+  padding: 0;
+}
+
+ul {
+  padding: 10px 10px 10px 20px;
+}
+
+li {
+  margin-bottom: 20px;
+  list-style-type: square;
+}
+
+hr {
   padding: 0;
 }
