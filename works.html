@@ -360,7 +360,8 @@ permalink: works/
 
     <script>
       var acc = document.getElementsByClassName("accordion_button");
-      for (let i = 0; i < acc.length; i++) {
+      var i;
+      for (i = 0; i < acc.length; i++) {
         acc[i].addEventListener("click", function() {
           [].forEach.call(acc, function(el) {
             el.nextElementSibling.style.maxHeight = null;
@@ -373,7 +374,7 @@ permalink: works/
       }
 
       var close = document.getElementsByClassName("close_accordion");
-      for (let i = 0; i < close.length; i++) {
+      for (i = 0; i < close.length; i++) {
         close[i].addEventListener("click", function() {
           document.getElementsByClassName("active")[0].classList.remove("active");
           [].forEach.call(document.getElementsByClassName("panel"), function(el) {
