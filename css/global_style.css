@@ -187,7 +187,7 @@ hr {
 }
 
 /* transcripts.html */
-.series {
+.works {
   max-width: 100%;
   text-align: center;
   border: 2px solid #e0f8cf;
@@ -196,7 +196,7 @@ hr {
   background-color: #2c3539;
 }
 
-.transcripts_button {
+.accordion_button {
   cursor: pointer;
   width: 100%;
   border: 2px solid #e0f8cf;
@@ -205,43 +205,47 @@ hr {
   outline: none;
   transition: 0.4s;
   color: #e0f8cf;
-  background-color: #071821;
+  background-color: #2c3539;
 }
 
-.transcripts_button h3 {
+.mainContainer .works .accordion_button:hover {
+  background-color: #2c3539;
+}
+
+.accordion_button h3 {
   font-size: 20px;
   letter-spacing: 0.5em;
   font-weight: 800;
 }
 
 .locher .active,
-.mainContainer .locher .transcripts_button:hover {
+.mainContainer .locher .accordion_button:hover {
   background-color: #89cfef;
   color: #071821;
 }
 
 .demon_blasphemer .active,
-.mainContainer .demon_blasphemer .transcripts_button:hover {
+.mainContainer .demon_blasphemer .accordion_button:hover {
   background-color: #306850;
 }
 
 .demon_brokenideals .active,
-.mainContainer .demon_brokenideals .transcripts_button:hover {
+.mainContainer .demon_brokenideals .accordion_button:hover {
   background-color: #685030;
 }
 
 .demon_dividedworld .active,
-.mainContainer .demon_dividedworld .transcripts_button:hover {
+.mainContainer .demon_dividedworld .accordion_button:hover {
   background-color: #505068;
 }
 
-.mainContainer .series > button:not([class*="active"]) {
+.mainContainer .works > button:not([class*="active"]) {
   color: #e0f8cf;
   background-color: #071821;
 }
 
 .active h3,
-.transcripts_button:hover h3 {
+.accordion_button:hover h3 {
   font-size: 22px;
 }
 
@@ -257,6 +261,10 @@ hr {
   padding-left: 10%;
 }
 
+.panel_content img {
+  max-width: 80%;
+}
+
 .panel_content h4 {
   font-size: 20px;
   border-bottom: 1px solid #e0f8cf;
@@ -264,6 +272,10 @@ hr {
 
 .panel_content p {
   text-align: left;
+}
+
+.panel_content.centered p {
+  text-align: center;
 }
 
 .panel_content ul {
@@ -302,6 +314,20 @@ hr {
   -ms-transform: translateY(-50%);
   -o-transform: translateY(-50%);
   transform: translateY(-50%);
+}
+
+.close_accordion {
+  width: 50px;
+  height: 50px;
+  padding-bottom: 10px;
+  transition: ease-in-out 0.2s;
+}
+
+.close_accordion:hover {
+  width: 60px;
+  height: 60px;
+  transition: ease-in-out 0.2s;
+  color: #86c06c;
 }
 
 /* Transcript - markdown */
@@ -442,7 +468,7 @@ hr {
     padding: 10px;
   }
 
-  .transcripts_button h3 {
+  .accordion_button h3 {
     letter-spacing: 0;
   }
 
