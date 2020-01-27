@@ -95,6 +95,11 @@ footer > a:hover {
   transition: all 0.25s ease-in;
 }
 
+.home {
+  width: 5em;
+  background: inherit;
+}
+
 /* low-res tablets, mobile landscape */
 @media (min-width: 481px) and (max-width: 767px) {
   h1 {
