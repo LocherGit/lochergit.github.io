@@ -2,6 +2,12 @@
   <a href="/">
     <img src="/img/logo.png" alt="locher_underscore_logo" />
   </a>
+  <a class="lang de inactive" href="#de" onClick="change_language('de');">
+    <span class="iconify" data-icon="emojione-v1:flag-for-flag-germany" data-inline="false"></span>
+  </a>
+  <a class="lang en active" href="#en">
+    <span class="iconify" data-icon="twemoji:flag-for-flag-us-outlying-islands" data-inline="false"></span>
+  </a>
 </div>
 <div class="mobile_canvas">
   <button type="button" class="menu_icon__open" onclick="openNav()"><span></span> <span></span> <span></span></button>
@@ -26,5 +32,33 @@
   function closeNav() {
     $(".menu_icon__open").removeClass("active");
     document.getElementById("off_canvas").style.top = "100%";
+  }
+
+  function change_language($lang) {
+    if ($lang == "de") {
+      switch (document.title) {
+        case "Locher_Works":
+          window.location.href = "/werke";
+          break;
+        case "Locher_Resources":
+          window.location.href = "/ressourcen";
+          break;
+        case "Locher_Home":
+        default:
+          window.location.href = "/start";
+      }
+    } else {
+      switch (document.title) {
+        case "Locher_Werke":
+          window.location.href = "/works";
+          break;
+        case "Locher_Ressourcen":
+          window.location.href = "/resources";
+          break;
+        case "Locher_Start":
+        default:
+          window.location.href = "/home";
+      }
+    }
   }
 </script>

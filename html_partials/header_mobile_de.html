@@ -1,32 +1,39 @@
-<div>
-  <div id="slideshow_proto"></div>
-  <div id="slideshow_parent">
-    <div id="slideshow_child"></div>
-  </div>
+<div class="mobile_logo">
   <a href="/">
     <img src="/img/logo.png" alt="locher_underscore_logo" />
   </a>
-  <a class="lang de inactive" href="#de" onClick="change_language('de');">
+  <a class="lang de active" href="#de"></a>
     <span class="iconify" data-icon="emojione-v1:flag-for-flag-germany" data-inline="false"></span>
   </a>
-  <a class="lang en active" href="#en">
+  <a class="lang en inactive" href="#en" onClick="change_language('de');">
     <span class="iconify" data-icon="twemoji:flag-for-flag-us-outlying-islands" data-inline="false"></span>
   </a>
 </div>
-<div class="title">
-  <h1>Locher_Underscore</h1>
+<div class="mobile_canvas">
+  <button type="button" class="menu_icon__open" onclick="openNav()"><span></span> <span></span> <span></span></button>
 </div>
-<ul>
-  <li><a href="/">Home</a></li>
-  <li><a href="/works">Works</a></li>
-  <li><a href="/resources">Resources</a></li>
-</ul>
-<span class="thoughts invisible">
-  <a href="/thoughts">
-    <span class="thoughts_padding">Thoughts</span>
-  </a>
-</span>
+<div id="off_canvas">
+  <div class="navtitle">Locher_Underscore</div>
+  <div class="sidenav">
+    <a href="/">Start</a>
+    <a href="/werke">Werke</a>
+    <a href="/ressourcen">Ressourcen</a>
+    <a class="invisible" href="/thoughts">Thoughts</a>
+  </div>
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+</div>
+
 <script>
+  function openNav() {
+    $(".menu_icon__open").addClass("active");
+    document.getElementById("off_canvas").style.top = "0";
+  }
+
+  function closeNav() {
+    $(".menu_icon__open").removeClass("active");
+    document.getElementById("off_canvas").style.top = "100%";
+  }
+
   function change_language($lang) {
     if ($lang == "de") {
       switch (document.title) {
