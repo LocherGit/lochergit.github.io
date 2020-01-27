@@ -102,6 +102,37 @@ header li a:hover {
   padding: 12px;
 }
 
+a.lang {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  padding: 0px 10px;
+  border-radius: 15px;
+  border: 2px solid #e0f8cf;
+}
+
+a.lang.active {
+  background: #e0f8cf;
+}
+
+a.lang.inactive {
+  opacity: 0.5;
+}
+
+a.lang:hover {
+  background: #86c06c;
+  opacity: 1;
+}
+
+a.lang.en {
+  top: 61px;
+}
+
+a.lang .iconify {
+  width: 60px;
+  height: 60px;
+}
+
 /* FOOTER */
 
 footer {
@@ -448,6 +479,19 @@ hr {
 
   header img {
     height: 50px;
+  }
+
+  a.lang.de {
+    right: 68px;
+  }
+
+  a.lang.en {
+    top: 0px;
+  }
+
+  a.lang .iconify {
+    width: 45px;
+    height: 45px;
   }
 
   .mainContainer {
