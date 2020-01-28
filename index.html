@@ -13,6 +13,15 @@
       function discord() {
         alert("Locher#0170");
       }
+
+      function enterWebsite() {
+        var userLang = navigator.language || navigator.userLanguage;
+        if (userLang == "de-DE") {
+          window.location.href = "/start";
+        } else {
+          window.location.href = "/home";
+        }
+      }
     </script>
   </head>
   <body>
@@ -51,7 +60,7 @@
       </ul>
     </header>
     <footer>
-      <a href="/home">
+      <a href="#enter" onClick="enterWebsite();">
         <i class="iconify home" data-icon="fa-solid:home" data-inline="false"></i>
       </a>
     </footer>
