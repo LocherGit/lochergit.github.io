@@ -19,10 +19,12 @@ a:hover {
 
 /* HEADER */
 
-[data-include="header"] {
+[data-include="header"],
+[data-include="header_en"] {
   display: block;
 }
-[data-include="header_mobile"] {
+[data-include="header_mobile"],
+[data-include="header_mobile_en"] {
   display: none;
 }
 
@@ -467,10 +469,12 @@ hr {
 /* GENERAL MOBILE CONSIDERATION */
 
 @media screen and (max-width: 992px) {
-  [data-include="header"] {
+  [data-include="header"],
+  [data-include="header_en"] {
     display: none;
   }
-  [data-include="header_mobile"] {
+  [data-include="header_mobile"],
+  [data-include="header_mobile_en"] {
     display: block;
     position: relative;
     height: 50px;
@@ -528,25 +532,29 @@ hr {
 
 /* MOBILE HEADER CONSIDERATION */
 
-[data-include="header_mobile"] .mobile_logo {
+[data-include="header_mobile"] .mobile_logo,
+[data-include="header_mobile_en"] .mobile_logo {
   height: 50px;
 }
 
-[data-include="header_mobile"] .mobile_canvas {
+[data-include="header_mobile"] .mobile_canvas,
+[data-include="header_mobile_en"] .mobile_canvas {
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
 }
 
-[data-include="header_mobile"] button {
+[data-include="header_mobile"] button,
+[data-include="header_mobile_en"] button {
   background: #071821;
   padding: 10px;
   border-radius: 10px;
   border: 2px solid #e0f8cf;
 }
 
-[data-include="header_mobile"] button > span {
+[data-include="header_mobile"] button > span,
+[data-include="header_mobile_en"] button > span {
   display: block;
   width: 29px;
   height: 2px;
@@ -563,11 +571,13 @@ hr {
   pointer-events: none;
 }
 
-[data-include="header_mobile"] button > span:last-child {
+[data-include="header_mobile"] button > span:last-child,
+[data-include="header_mobile_en"] button > span:last-child {
   margin-bottom: 0;
 }
 
-[data-include="header_mobile"] button.active > span:first-child {
+[data-include="header_mobile"] button.active > span:first-child,
+[data-include="header_mobile_en"] button.active > span:first-child {
   transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
@@ -576,14 +586,16 @@ hr {
   opacity: 1;
 }
 
-[data-include="header_mobile"] button.active > span {
+[data-include="header_mobile"] button.active > span,
+[data-include="header_mobile_en"] button.active > span {
   opacity: 0;
   transition: opacity 0.05s 0s, transform 0.2s 0s ease-out;
   -webkit-transition: opacity 0.05s 0s, -webkit-transform 0.2s 0s ease-out;
   margin-left: 7px;
 }
 
-[data-include="header_mobile"] button.active > span:last-child {
+[data-include="header_mobile"] button.active > span:last-child,
+[data-include="header_mobile_en"] button.active > span:last-child {
   transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
   -moz-transform: rotate(-45deg);
