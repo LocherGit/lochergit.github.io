@@ -1,26 +1,33 @@
-var slideshow_message_max = 87;
+var slideshow_message_max = 21;
 var slideshow_messages = new Array(slideshow_message_max);
-slideshow_messages[0] = "OMG did Locher really do this!? &#128561;";
-slideshow_messages[1] = "ASHAMED you weren't born as cool as me, huh? &#128521;";
-slideshow_messages[2] = "Who needs any countries besides Vietnam?!";
-slideshow_messages[3] = "What admirable killing!";
-slideshow_messages[4] = "What is this asian bullshit?";
-slideshow_messages[5] = "Wednesday and Sunday are perfect days to get rid of your scruff.";
-slideshow_messages[6] = "Way to go... EXTINCT, Martians!";
-slideshow_messages[7] = "Ku ku ku ku!";
-slideshow_messages[8] = "OR SO YOU THINK! Humanity is ever controlled by demons!";
-slideshow_messages[9] = "Friggin' Earth! Think you're so cool and blue! You make me SICK!";
-slideshow_messages[10] = "Bupporugyarupirugyappoppaaa!!";
-slideshow_messages[11] = "I hope you don't message me at 3am because that's when I am SLEEPING.";
-slideshow_messages[12] = "Damnit! Why am I so miserable?";
-slideshow_messages[13] = "Operation Love and PEEEEEACE?!";
-slideshow_messages[14] = "This is a typical fantasy RPG world of swords and magic.";
-slideshow_messages[15] = "Mommy. Did you know there was a nuclear bomb in the garden?";
-slideshow_messages[16] = "Wellity well! Let's go have us a WAR!";
-slideshow_messages[17] = "These are... um... hm... ah, y-yes! They're DEATH PREDATORS! Maybe.";
-slideshow_messages[18] = "EAT MEEE!";
-slideshow_messages[19] = "You should've bought life insurance, too.";
-slideshow_messages[20] = "Submachine guns are for girly girls. Men wield the SHOTGUN!";
+slideshow_messages[0] = "Uff, hat's der Locher endlich hinbekommen mit der Webseite!? &#128561;";
+slideshow_messages[1] = "Wow, jetzt glotzt du wohl in angesicht meiner Pracht? &#128521;";
+slideshow_messages[2] = "Vietnam! Deutschland! Vielleicht sogar Tschechien?! &#128525;";
+slideshow_messages[3] = "Hm, was machen Sachen? &#128521;";
+slideshow_messages[4] = "Ey, wenn ich du wäre... dann wäre ich doch lieber ich selbst &#128517;";
+slideshow_messages[5] = "Weißt du, wenn man den Mittwoch endlich erreicht hat, dann sieht man sich schon halb im Wochenende... &#128531;";
+slideshow_messages[6] = "Ve- Verdammich!!! &#128565;";
+slideshow_messages[7] = "&#127925; Euch erwarten keine milden Strafen, zur Hölle fahren weil Gott und Teufel sich im Stripphaus trafen &#127925;";
+slideshow_messages[8] = "Ach, das ist doch halb so schlimm! Dein Penis ist zwar klein, ABER dünn! &#129299;";
+slideshow_messages[9] =
+  "Heißt der Boden unter unseren Füßen 'Erde', weil der Planet so heißt? Also nennt man den Boden auf dem Mars schlichtweg 'Mars'? &#128531;";
+slideshow_messages[10] = "DONZ, das ist das Akronym für Deutsche Oberarm Nippel Zeitbomben. Wie kannst du nur sowas vergessen? &#129315;";
+slideshow_messages[11] = "Ich bete zu Gott, dass Fäkalibur nur als dummer Scherz gemeint war und keine Vorwarnung. &#129326;";
+slideshow_messages[12] = "Meine allerlersten Sprachaufnahmen? 100% nur schlecht aufgenommene Fürze. &#127908;";
+slideshow_messages[13] =
+  "Meine größte charakterliche Stärke ist es Leute mit verschränkten Armen hochzuheben und kopfüber in Mülltonnen zu stecken. &#128527;";
+slideshow_messages[14] =
+  "Für jemanden mit viel Humor und schlecht improvisierten Wortwitzen wie ich es bin, ist es doch unvorstellbar das ich keinen Sarkasmus verstehe. &#128530;";
+slideshow_messages[15] =
+  "Kennt ihr das Gefühl auf einer Keller-LANparty zu sein wo ihr tagelang kein Tageslicht seht und euch wundert ob es dunkel ist wenn ihr den Pizzaboten oben trefft? &#128524;";
+slideshow_messages[16] =
+  "'Hallo gütige Frau, könnten Sie mir bitte 1€ geben?' 'Och du armes Kind, wieso denn 1€?' 'Ehm ich..., ich weiß nicht? Ich will nach Hause? &#128517;";
+slideshow_messages[17] = "Es geht mir nicht aus dem Kopf! Es sind BUCHSTABEN. Daher muss es BUCHSTABET lauten, nicht ALPHABET! &#128545;";
+slideshow_messages[18] =
+  "Wieso heißt er 'DJ Bobo', was ist denn das für ein Name? Bobo... gibt es wirklich Leute, die so heißen? Bodo kann ich noch verstehen aber Bobo treibt es zu weit. &#128534;";
+slideshow_messages[19] = "Zweitstudenten zahlen einen Semesteraufpreis von 650€, das heißt 650€ x 6 = 3900€ Aufpreis in Regelstudienzeit! &#128557;";
+slideshow_messages[20] = "Ich weiß zwar nicht wie es andere Leute machen, aber rasieren sollte man sich jeden Mittwoch und Sonntag! &#9986;";
+
 slideshow_messages[21] = "DON'T friggin' pray!";
 slideshow_messages[22] = "Once I sell you, I'll be filthy rich!";
 slideshow_messages[23] = "HUMAN MEAT! I want MEAT MEAT MEAT MEAT MEAT!!!!!!!!!";
