@@ -103,6 +103,10 @@ header li a:hover {
   padding: 12px;
 }
 
+.no_lang .lang {
+  display: none;
+}
+
 a.lang {
   position: absolute;
   top: 0px;
