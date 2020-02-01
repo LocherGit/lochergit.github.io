@@ -13,7 +13,7 @@
   <button type="button" class="menu_icon__open" onclick="openNav()"><span></span> <span></span> <span></span></button>
 </div>
 <div id="off_canvas">
-  <div class="navtitle">Locher_Underscore</div>
+  <div id="mobile_title" class="navtitle">Locher_Underscore</div>
   <div class="sidenav">
     <a href="/">Home</a>
     <a href="/works">Works</a>
@@ -24,6 +24,9 @@
 </div>
 
 <script>
+  $(document).ready(function() {
+    $("#mobile_title").text(document.title);
+  });
   function openNav() {
     $(".menu_icon__open").addClass("active");
     document.getElementById("off_canvas").style.top = "0";

@@ -10,7 +10,7 @@
   </a>
 </div>
 <div class="title">
-  <h1>Locher_Underscore</h1>
+  <h1 id="title">Locher_Underscore</h1>
 </div>
 <ul>
   <li><a href="/">Start</a></li>
@@ -23,6 +23,9 @@
   </a>
 </span>
 <script>
+  $(document).ready(function() {
+    $("#title").text(document.title);
+  });
   function change_language($lang) {
     if ($lang == "de") {
       switch (document.title) {
