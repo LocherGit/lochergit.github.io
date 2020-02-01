@@ -220,7 +220,7 @@ hr {
   }
 }
 
-/* projects.html */
+/* works.html */
 .projects {
   max-width: 100%;
   text-align: center;
@@ -492,6 +492,32 @@ hr {
   color: #86c06c;
   letter-spacing: 0.5em;
   white-space: nowrap;
+}
+
+/* Resources.html */
+#jukebox {
+  background: #2c3539;
+  padding: 0px 20px;
+  border-radius: 15px;
+  border: 2px solid #e0f8cf;
+}
+
+#jukebox_player {
+  width: 60%;
+}
+
+#jukebox_button {
+  color: #e0f8cf;
+  padding: 10px 20px;
+  border: 2px solid #e0f8cf;
+  border-radius: 15px;
+  background: #306850;
+  transition: all 0.25s ease-out;
+  text-decoration: none;
+}
+
+#jukebox_button:hover {
+  text-decoration: underline;
 }
 
 /* GENERAL MOBILE CONSIDERATION */
