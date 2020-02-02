@@ -576,6 +576,10 @@ hr {
     width: 90%;
   }
 
+  #jukebox_player {
+    width: 90%;
+  }
+
   #reader-theme,
   .non-mobile {
     display: none;
