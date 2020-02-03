@@ -111,7 +111,7 @@ function newslideshow_messages() {
   var newString = slideshow_messages[Math.floor(Math.random() * slideshow_message_max)];
   marquee.html(newString);
   testArea.html(newString);
-  stringWidth = testArea.width() * 2;
+  stringWidth = testArea.html().length * 20;
 }
 
 function marqueeUpdate() {
@@ -119,7 +119,7 @@ function marqueeUpdate() {
   lastTime = Date.now();
   marqueeX = marqueeX - 0.12 * delta;
 
-  if (marqueeX < -stringWidth - 150) {
+  if (marqueeX < -stringWidth) {
     marqueeX = $("#slideshow_child").width();
     newslideshow_messages();
   }
