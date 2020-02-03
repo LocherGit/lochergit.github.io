@@ -43,7 +43,6 @@ permalink: werke/
             </p>
             <p>Schlagwörter: gamedev, gbstudio, pixelart, 8bit, story</p>
             <p><a href="https://github.com/locherunderscore/demon-blasphemer-gbstudio-">Github Repository</a></p>
-            <div class="iconify close_accordion" data-icon="bx:bxs-arrow-from-bottom" data-inline="false"></div>
           </div>
         </div>
       </div>
@@ -60,7 +59,6 @@ permalink: werke/
             <p>Eine Fanseite für eine unabhängige Musikgruppe, welche bekannt für ihre Musikarrangements der Spielereihe 'Touhou' sind.</p>
             <p>Schlagwörter: website, html, css</p>
             <p><a href="https://github.com/locherunderscore/demetori-fansite">Github Repository</a></p>
-            <div class="iconify close_accordion" data-icon="bx:bxs-arrow-from-bottom" data-inline="false"></div>
           </div>
         </div>
       </div>
@@ -80,7 +78,6 @@ permalink: werke/
             </p>
             <p>Schlagwörter: visualnovel, renpy, python, story</p>
             <p><a href="https://github.com/locherunderscore/Heimweh">Github Repository</a></p>
-            <div class="iconify close_accordion" data-icon="bx:bxs-arrow-from-bottom" data-inline="false"></div>
           </div>
         </div>
       </div>
@@ -100,7 +97,6 @@ permalink: werke/
             </p>
             <p>Schlagwörter: gamedev, ue4</p>
             <p><a href="https://github.com/locherunderscore/demetori-fansite">Github Repository</a></p>
-            <div class="iconify close_accordion" data-icon="bx:bxs-arrow-from-bottom" data-inline="false"></div>
           </div>
         </div>
       </div>
@@ -119,7 +115,6 @@ permalink: werke/
             <p>Ein eigens geschriebener Filter für Backend Bestellungen mit eigens spezifizierten Filterbestimmungen. Für Shopware 5.</p>
             <p>Schlagwörter: shopware, backend, php, javascript</p>
             <p><a href="https://github.com/locherunderscore/demetori-fansite">Github Repository</a></p>
-            <div class="iconify close_accordion" data-icon="bx:bxs-arrow-from-bottom" data-inline="false"></div>
           </div>
         </div>
       </div>
@@ -150,7 +145,6 @@ permalink: werke/
               abgestimmt durch <a class="enforce-a" href="https://twitter.com/ChezyGH3">AshMadeOurEyes</a>.
             </p>
             <p>Musikrichtung: indie, parody, ethno-pop</p>
-            <div class="iconify close_accordion" data-icon="bx:bxs-arrow-from-bottom" data-inline="false"></div>
           </div>
         </div>
       </div>
@@ -212,7 +206,6 @@ permalink: werke/
                 <span><i>12.25</i></span>
               </li>
             </ul>
-            <div class="iconify close_accordion" data-icon="bx:bxs-arrow-from-bottom" data-inline="false"></div>
           </div>
         </div>
       </div>
@@ -273,7 +266,6 @@ permalink: werke/
                 <span><i>12.25</i></span>
               </li>
             </ul>
-            <div class="iconify close_accordion" data-icon="bx:bxs-arrow-from-bottom" data-inline="false"></div>
           </div>
         </div>
       </div>
@@ -317,7 +309,6 @@ permalink: werke/
                 <span><i>12.25</i></span>
               </li>
             </ul>
-            <div class="iconify close_accordion" data-icon="bx:bxs-arrow-from-bottom" data-inline="false"></div>
           </div>
         </div>
       </div>
@@ -361,34 +352,32 @@ permalink: werke/
                 <span><i>12.25</i></span>
               </li>
             </ul>
-            <div class="iconify close_accordion" data-icon="bx:bxs-arrow-from-bottom" data-inline="false"></div>
           </div>
         </div>
       </div>
     </div>
 
     <script>
+      /* Adding a functionality to open and close accordions */
       var acc = document.getElementsByClassName("accordion_button");
       var i;
       for (i = 0; i < acc.length; i++) {
         acc[i].addEventListener("click", function() {
-          [].forEach.call(acc, function(el) {
-            el.nextElementSibling.style.maxHeight = null;
-            el.classList.remove("active");
-          });
-          this.classList.add("active");
-          var panel = this.nextElementSibling;
-          panel.style.maxHeight = panel.scrollHeight + 100 + "px";
-        });
-      }
-
-      var close = document.getElementsByClassName("close_accordion");
-      for (i = 0; i < close.length; i++) {
-        close[i].addEventListener("click", function() {
-          document.getElementsByClassName("active")[0].classList.remove("active");
-          [].forEach.call(document.getElementsByClassName("panel"), function(el) {
-            el.style.maxHeight = null;
-          });
+          if (this.classList.contains("active")) {
+            console.log("close button clicked to close");
+            this.classList.remove("active");
+            var panel = this.nextElementSibling;
+            panel.style.maxHeight = null;
+          } else {
+            [].forEach.call(acc, function(el) {
+              el.nextElementSibling.style.maxHeight = null;
+              el.classList.remove("active");
+            });
+            console.log("button clicked to open");
+            this.classList.add("active");
+            var panel = this.nextElementSibling;
+            panel.style.maxHeight = panel.scrollHeight + 100 + "px";
+          }
         });
       }
     </script>

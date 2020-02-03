@@ -41,7 +41,6 @@ permalink: works/
             <p>A short retro gameboy game created via GB Studio. JRPG, turn-based combat, etc...</p>
             <p>Tags: gamedev, gbstudio, pixelart, 8bit, story</p>
             <p><a href="https://github.com/locherunderscore/demon-blasphemer-gbstudio-">Github Repository</a></p>
-            <div class="iconify close_accordion" data-icon="bx:bxs-arrow-from-bottom" data-inline="false"></div>
           </div>
         </div>
       </div>
@@ -58,7 +57,6 @@ permalink: works/
             <p>A fansite for a doujin music group who are known for their Touhou music arrangement.</p>
             <p>Tags: website, html, css</p>
             <p><a href="https://github.com/locherunderscore/demetori-fansite">Github Repository</a></p>
-            <div class="iconify close_accordion" data-icon="bx:bxs-arrow-from-bottom" data-inline="false"></div>
           </div>
         </div>
       </div>
@@ -69,13 +67,12 @@ permalink: works/
         </button>
         <div class="panel">
           <div class="panel_content centered">
-            <a href="https://github.com/locherunderscore/Heimweh/raw/master/git_title.jpg"
-              ><img src="https://github.com/locherunderscore/Heimweh/raw/master/git_title.jpg" alt="heimweh-vn-image"
-            /></a>
+            <a href="https://github.com/locherunderscore/Heimweh/raw/master/git_title.jpg">
+              <img src="https://github.com/locherunderscore/Heimweh/raw/master/git_title.jpg" alt="heimweh-vn-image" />
+            </a>
             <p>A self-authored visual novel, created in order to document its development process via Ren'Py.</p>
             <p>Tags: visualnovel, renpy, python, story</p>
             <p><a href="https://github.com/locherunderscore/Heimweh">Github Repository</a></p>
-            <div class="iconify close_accordion" data-icon="bx:bxs-arrow-from-bottom" data-inline="false"></div>
           </div>
         </div>
       </div>
@@ -92,7 +89,6 @@ permalink: works/
             <p>Group project, third person plattformer. Charging vectors to dash toward specific directions and clear obstacles.</p>
             <p>Tags: gamedev, ue4</p>
             <p><a href="https://github.com/locherunderscore/demetori-fansite">Github Repository</a></p>
-            <div class="iconify close_accordion" data-icon="bx:bxs-arrow-from-bottom" data-inline="false"></div>
           </div>
         </div>
       </div>
@@ -111,7 +107,6 @@ permalink: works/
             <p>Customfilter of backend orders with unique filter-conditions for shopware 5</p>
             <p>Tags: shopware, backend, php, javascript</p>
             <p><a href="https://github.com/locherunderscore/demetori-fansite">Github Repository</a></p>
-            <div class="iconify close_accordion" data-icon="bx:bxs-arrow-from-bottom" data-inline="false"></div>
           </div>
         </div>
       </div>
@@ -142,7 +137,6 @@ permalink: works/
               mastered by <a class="enforce-a" href="https://twitter.com/ChezyGH3">AshMadeOurEyes</a>.
             </p>
             <p>Genre: indie, parody, ethno-pop</p>
-            <div class="iconify close_accordion" data-icon="bx:bxs-arrow-from-bottom" data-inline="false"></div>
           </div>
         </div>
       </div>
@@ -203,7 +197,6 @@ permalink: works/
                 <span><i>12.25</i></span>
               </li>
             </ul>
-            <div class="iconify close_accordion" data-icon="bx:bxs-arrow-from-bottom" data-inline="false"></div>
           </div>
         </div>
       </div>
@@ -264,7 +257,6 @@ permalink: works/
                 <span><i>12.25</i></span>
               </li>
             </ul>
-            <div class="iconify close_accordion" data-icon="bx:bxs-arrow-from-bottom" data-inline="false"></div>
           </div>
         </div>
       </div>
@@ -319,7 +311,6 @@ permalink: works/
                 <span><i>12.25</i></span>
               </li>
             </ul>
-            <div class="iconify close_accordion" data-icon="bx:bxs-arrow-from-bottom" data-inline="false"></div>
           </div>
         </div>
       </div>
@@ -363,34 +354,32 @@ permalink: works/
                 <span><i>12.25</i></span>
               </li>
             </ul>
-            <div class="iconify close_accordion" data-icon="bx:bxs-arrow-from-bottom" data-inline="false"></div>
           </div>
         </div>
       </div>
     </div>
 
     <script>
+      /* Adding a functionality to open and close accordions */
       var acc = document.getElementsByClassName("accordion_button");
       var i;
       for (i = 0; i < acc.length; i++) {
         acc[i].addEventListener("click", function() {
-          [].forEach.call(acc, function(el) {
-            el.nextElementSibling.style.maxHeight = null;
-            el.classList.remove("active");
-          });
-          this.classList.add("active");
-          var panel = this.nextElementSibling;
-          panel.style.maxHeight = panel.scrollHeight + 100 + "px";
-        });
-      }
-
-      var close = document.getElementsByClassName("close_accordion");
-      for (i = 0; i < close.length; i++) {
-        close[i].addEventListener("click", function() {
-          document.getElementsByClassName("active")[0].classList.remove("active");
-          [].forEach.call(document.getElementsByClassName("panel"), function(el) {
-            el.style.maxHeight = null;
-          });
+          if (this.classList.contains("active")) {
+            console.log("close button clicked to close");
+            this.classList.remove("active");
+            var panel = this.nextElementSibling;
+            panel.style.maxHeight = null;
+          } else {
+            [].forEach.call(acc, function(el) {
+              el.nextElementSibling.style.maxHeight = null;
+              el.classList.remove("active");
+            });
+            console.log("button clicked to open");
+            this.classList.add("active");
+            var panel = this.nextElementSibling;
+            panel.style.maxHeight = panel.scrollHeight + 100 + "px";
+          }
         });
       }
     </script>
