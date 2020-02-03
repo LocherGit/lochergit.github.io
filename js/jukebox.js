@@ -17,7 +17,7 @@ $(document).ready(function() {
 });
 
 function setNewTrack() {
-  var random_track = randomize($("#jukebox_source").attr("track-ID"));
+  var random_track = jukebox_entries[randomize($("#jukebox_source").attr("track-ID"))];
   $("#track_title").text(random_track.name);
   $("#jukebox_source").attr("src", random_track.path);
   $("#jukebox_source").attr("track-ID", random_track.id);
@@ -27,6 +27,6 @@ function setNewTrack() {
 }
 
 function randomize(id = -1) {
-  var num = jukebox_entries[Math.floor(Math.random() * jukebox_entries_max)];
-  return num === id ? randomize(id) : num;
+  var num = Math.floor(Math.random() * jukebox_entries_max);
+  return num == id ? randomize(id) : num;
 }
