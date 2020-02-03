@@ -366,7 +366,6 @@ permalink: works/
       for (i = 0; i < acc.length; i++) {
         acc[i].addEventListener("click", function() {
           if (this.classList.contains("active")) {
-            console.log("close button clicked to close");
             this.classList.remove("active");
             var panel = this.nextElementSibling;
             panel.style.maxHeight = null;
@@ -375,7 +374,6 @@ permalink: works/
               el.nextElementSibling.style.maxHeight = null;
               el.classList.remove("active");
             });
-            console.log("button clicked to open");
             this.classList.add("active");
             var panel = this.nextElementSibling;
             panel.style.maxHeight = panel.scrollHeight + 100 + "px";
