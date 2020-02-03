@@ -506,7 +506,11 @@ hr {
   width: 60%;
 }
 
-#jukebox_button {
+#jukebox h3 {
+  margin-bottom: 30px;
+}
+
+#jukebox a.jukebox_button {
   color: #e0f8cf;
   padding: 10px 20px;
   border: 2px solid #e0f8cf;
@@ -516,8 +520,17 @@ hr {
   text-decoration: none;
 }
 
-#jukebox_button:hover {
+#jukebox a.jukebox_button:hover {
   text-decoration: underline;
+}
+
+#jukebox_catalogue ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#jukebox_catalogue li {
+  padding: 5px;
 }
 
 /* GENERAL MOBILE CONSIDERATION */
