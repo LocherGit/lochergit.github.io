@@ -40,18 +40,6 @@
   function change_language($lang) {
     if ($lang == "de") {
       switch (document.title) {
-        case "Locher_Works":
-          window.location.href = "/werke";
-          break;
-        case "Locher_Resources":
-          window.location.href = "/ressourcen";
-          break;
-        case "Locher_Home":
-        default:
-          window.location.href = "/start";
-      }
-    } else {
-      switch (document.title) {
         case "Locher_Werke":
           window.location.href = "/works";
           break;
@@ -61,6 +49,18 @@
         case "Locher_Start":
         default:
           window.location.href = "/home";
+      }
+    } else {
+      switch (document.title) {
+        case "Locher_Works":
+          window.location.href = "/werke";
+          break;
+        case "Locher_Resources":
+          window.location.href = "/ressourcen";
+          break;
+        case "Locher_Home":
+        default:
+          window.location.href = "/start";
       }
     }
   }
