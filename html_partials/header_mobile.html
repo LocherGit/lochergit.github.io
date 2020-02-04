@@ -37,8 +37,9 @@
     document.getElementById("off_canvas").style.top = "100%";
   }
 
-  function change_language($lang) {
-    if ($lang == "de") {
+  function change_language($redirect_to_lang) {
+    if ($redirect_to_lang == "en") {
+      // Deutsche Seite -> Umleitung auf Englische Seite
       switch (document.title) {
         case "Locher_Werke":
           window.location.href = "/works";
@@ -51,6 +52,7 @@
           window.location.href = "/home";
       }
     } else {
+      // Englische Seite -> Umleitung auf Deutsche Seite
       switch (document.title) {
         case "Locher_Works":
           window.location.href = "/werke";
