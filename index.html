@@ -1,68 +1,33 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Locher_Underscore</title>
-    <link rel="stylesheet" type="text/css" href="/css/home_style.css" />
-    <link rel="icon" href="/img/favicon.ico" type="image/x-icon" />
-    <meta name="author" content="Locher_Underscore" />
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://code.iconify.design/1/1.0.3/iconify.min.js"></script>
-    <script>
-      function discord() {
-        alert("Locher#0170");
-      }
 
-      function enterWebsite() {
-        var userLang = navigator.language || navigator.userLanguage;
-        if (userLang == "de-DE") {
-          window.location.href = "/start";
-        } else {
-          window.location.href = "/home";
-        }
-      }
-    </script>
-  </head>
-  <body>
-    <header>
-      <h1>Locher_Underscore</h1>
-      <h2>My Github Page</h2>
-      <ul class="profile-list">
-        <li>
-          <a href="mailto:ngoc.ton@gmx.de" target="_blank" title="GMX Mail">
-            <i class="iconify" data-icon="icomoon-free:mail" data-inline="false">
-              <span class="screen-reader">Mail: ngoc.ton@gmx.de</span>
-            </i>
-          </a>
-        </li>
-        <li>
-          <a href="https://github.com/locherunderscore/" target="_blank" title="Github">
-            <i class="iconify" data-icon="zmdi:github-box" data-inline="false">
-              <span class="screen-reader">Github: Locher Underscore</span>
-            </i>
-          </a>
-        </li>
-        <li>
-          <a href="#" id="discord" data-toggle="tooltip" title="Locher#0170" onclick="discord()">
-            <i class="iconify" data-icon="simple-icons:discord" data-inline="false">
-              <span class="screen-reader">Discord: Locher#0170</span>
-            </i>
-          </a>
-        </li>
-        <li>
-          <a href="https://locher.itch.io/" target="_blank" title="Itch.io">
-            <i class="iconify" data-icon="fa-brands:itch-io" data-inline="false">
-              <span class="screen-reader">Itch.io</span>
-            </i>
-          </a>
-        </li>
-      </ul>
-    </header>
-    <footer>
-      <a href="#enter" onClick="enterWebsite();">
-        <i class="iconify home" data-icon="fa-solid:home" data-inline="false"></i>
-      </a>
-    </footer>
-  </body>
+<head>
+  <title>Locher_</title>
+  <link rel="stylesheet" type="text/css" href="/style.css" />
+  <link rel="icon" href="./favicon.ico" type="image/x-icon" />
+  <meta name="author" content="Locher_" />
+  <meta property="og:title" content="Locher_ Gitpage">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+
+<body>
+  <div class="frame">
+    <br>
+    <div class="card_frame">
+      <div class="card_body">
+
+        <div class="intro_panel">
+          <div class="logo_container">
+            <img src="./img/locher_logo.png" alt="Locher_ Logo" class="logo">
+            <img src="./img/locher_star.png" alt="Locher_ Star" class="star">
+          </div>
+        </div>
+        <div class="input_group"><input type="text" class="search_form" placeholder="Filter" id="search" oninput="searchOnInput()"></div>
+        <div id="projects"></div>
+      </div>
+</body>
+
+<script src="./projects.js"></script>
+<script src="./sorter.js"></script>
 </html>
