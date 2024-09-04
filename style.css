@@ -1,4 +1,6 @@
-.hidden { display: none; }
+.hidden {
+  display: none;
+}
 
 /* Font */
 
@@ -6,15 +8,44 @@
   font-family: "Glacial";
   src: url("../font/GlacialIndifference-Regular.otf") format("opentype");
 }
-  
-* { font-family: "Glacial", monospace, Verdana, Arial; }
-body { background-image: repeating-linear-gradient(45deg, #000, #306850 10px, #071821 10px, #071821 20px);  }
+
+@font-face {
+  font-family: "Cafe";
+  src: url("../font/This_Cafe.otf") format("opentype");
+}
+
+* {
+  font-family: "Glacial", monospace, Verdana, Arial;
+}
+
+body {
+  background-image: repeating-linear-gradient(45deg, #000, #306850 10px, #071821 10px, #071821 20px);
+}
 
 /* Frame */
-@media (min-width: 576px) {   .frame { max-width: 550px; }}
-@media (min-width: 768px) {   .frame { max-width: 720px; }}
-@media (min-width: 992px) {   .frame { max-width: 960px; }}
-@media (min-width: 1200px){   .frame { max-width: 1000px;}}
+@media (min-width: 576px) {
+  .frame {
+    max-width: 550px;
+  }
+}
+
+@media (min-width: 768px) {
+  .frame {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .frame {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .frame {
+    max-width: 1000px;
+  }
+}
 
 .frame {
   width: 100%;
@@ -34,7 +65,7 @@ body { background-image: repeating-linear-gradient(45deg, #000, #306850 10px, #0
   word-wrap: break-word;
   background-color: #fff;
   background-clip: border-box;
-  border: 1px solid rgba(0,0,0,.125);
+  border: 1px solid rgba(0, 0, 0, .125);
   border-radius: .5rem;
 }
 
@@ -46,23 +77,33 @@ body { background-image: repeating-linear-gradient(45deg, #000, #306850 10px, #0
 /* Intro Panel */
 .intro_panel {
   text-align: center;
-  padding: 4rem 2rem;
+  padding: 2rem 2rem;
   margin-bottom: 2rem;
   background-color: #E0F8CF;
   border-radius: .3rem;
 }
-
-.intro_panel .intro_title {
+@media (min-width: 768px) {
+  .intro_panel {
+    padding: 4rem 2rem;
+  }
+}
+.intro_panel .title span {
+  font-family: "Cafe", monospace, Verdana, Arial;
   color: #071821;
   font-weight: 600;
-  font-size: 20px;
-  letter-spacing: 2px;
+  font-size: 40px;
+  letter-spacing: 5px;
 }
 
 @media (min-width: 768px) {
-  .intro_panel .intro_title {
+  .intro_panel .title span {
     font-size: 60px;
-    line-height: 44px;
+  }
+}
+
+@media (min-width: 992px) {
+  .intro_panel .title span {
+    font-size: 80px;
   }
 }
 
@@ -80,20 +121,36 @@ body { background-image: repeating-linear-gradient(45deg, #000, #306850 10px, #0
 }
 
 .star {
-  max-width: 30%;
+  max-width: 10%;
   animation-name: spin;
   animation-duration: 5s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
-  position: absolute;
-  top: 0;
-  left: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  
+}
+
+@media (min-width: 768px) {
+  .star {
+    max-width: 20%;
+    animation-name: spin;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    /*position: absolute;
+    top: 0;
+    left: 50%;*/
+  }
 }
 
 @keyframes spin {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -103,7 +160,7 @@ hr {
   margin-top: 1rem;
   margin-bottom: 1rem;
   border: 0;
-  border-top: 1px solid rgba(0,0,0,.2);
+  border-top: 1px solid rgba(0, 0, 0, .2);
   max-width: 75%;
 }
 
@@ -129,12 +186,14 @@ hr {
   background-clip: padding-box;
   border: 1px solid #86C06C;
   border-radius: .25rem;
-  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
 
 /* Project Panel */
 
-h2 { text-align: center;}
+h2 {
+  text-align: center;
+}
 
 .flex_container {
   display: flex;
@@ -143,11 +202,14 @@ h2 { text-align: center;}
 }
 
 @media (min-width: 992px) {
-  .flex_child { 
-    width: 350px; 
+  .flex_child {
+    width: 350px;
     margin: auto;
   }
-  .button_toolbar { justify-content: flex-start !important; }
+
+  .button_toolbar {
+    justify-content: flex-start !important;
+  }
 }
 
 
@@ -176,7 +238,7 @@ h2 { text-align: center;}
   font-size: 1rem;
   line-height: 1.5;
   border-radius: .25rem;
-  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
   text-decoration: none;
 }
 

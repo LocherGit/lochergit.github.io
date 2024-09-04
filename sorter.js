@@ -99,7 +99,12 @@ function searchOnInput() {
             imageNode.className = "flex_image";
             imageNode.setAttribute('src', image);
             imageNode.setAttribute('alt', 'Image of ' + title);
-            flexImage.appendChild(imageNode);
+
+            const imageLinkNode = document.createElement("a");
+            imageLinkNode.href = image;
+            imageLinkNode.target="_blank"
+            imageLinkNode.appendChild(imageNode);
+            flexImage.appendChild(imageLinkNode);
         }
 
         list.appendChild(card);

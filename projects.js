@@ -1,5 +1,23 @@
 const projects = [
     {
+        title: "Kingdom's Last Hand",
+        image: "/img/klh_min.png",
+        description: "Protect your kingdom from alien invaders by placing unit cards who will fight for your cause.",
+        tags: "gamedev, godot, card battler, tower defense, roguelike",
+        linkname_one: "Itch.io",
+        link_one: "https://locher.itch.io/kingdoms-last-hand"
+    },
+    {
+        title: "Gaianaut",
+        image: "/img/gaianaut_min.png",
+        description: "Recreate your local surroundings into a barren postapocalyptic landscape where you enter dungeons and defeat zombies.",
+        tags: "gamedev, godot, geolocation, shooter, dungeon-crawling, procedural generation",
+        linkname_one: "Project Page",
+        link_one: "https://www.hdm-stuttgart.de/stage/projekt_detail/projekt_details?projekt_ID=4323",
+        linkname_two: "Itch.io",
+        link_two: "https://locher.itch.io/gaianaut"
+    },
+    {
         title: "Cursor Odyssey",
         image: "https://raw.githubusercontent.com/locherunderscore/cursor-odyssey/develop/cover.jpg",
         description: "Indirectly control a spaceship with your mouse and evade a storm of incoming asteroids.",
@@ -80,7 +98,7 @@ const projects = [
         title: "Hex Navigator",
         image: "https://github.com/locherunderscore/hex-navigator/raw/main/hexnavigator.png",
         description: "A short demonstration of hexagon grid-based pathfinding with up to three agents. Includes a mode with editable map and a mode for compile stresstests.",
-        tags: "simulation, ai, pathfinding",
+        tags: "godot, simulation, ai, pathfinding",
         linkname_one: "Github",
         link_one: "https://github.com/locherunderscore/hex-navigator",
         linkname_two: "Itch.io",
