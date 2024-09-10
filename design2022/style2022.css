@@ -6,12 +6,12 @@
 
 @font-face {
   font-family: "Glacial";
-  src: url("../font/GlacialIndifference-Regular.otf") format("opentype");
+  src: url("./font/GlacialIndifference-Regular.otf") format("opentype");
 }
 
 @font-face {
   font-family: "Cafe";
-  src: url("../font/This_Cafe.otf") format("opentype");
+  src: url("./font/This_Cafe.otf") format("opentype");
 }
 
 * {

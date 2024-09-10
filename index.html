@@ -2,31 +2,130 @@
 <html>
 
 <head>
-  <title>Locher_</title>
-  <link rel="stylesheet" type="text/css" href="/style.css" />
-  <link rel="icon" href="./favicon.ico" type="image/x-icon" />
+  <title>Locher's Headspace</title>
+  <link rel="icon" type="image/x-icon" href="./images/favicons/favicon.ico"/>
+  <link rel="icon" type="image/png" sizes="16x16" href="./images/favicons/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="./images/favicons/android-chrome-512x512.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="./images/favicons/android-chrome-192x192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="./images/favicons/apple-touch-icon.png" />
+  <link rel="stylesheet" type="text/css" href="./style2024.css" />
+
   <meta name="author" content="Locher_" />
-  <meta property="og:title" content="Locher_ Gitpage">
+  <meta property="og:title" content="Locher's Headspace">
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 </head>
 
 <body>
-  <div class="frame">
-    <br>
-    <div class="card_frame">
-      <div class="card_body">
-
-        <div class="intro_panel">
-          <div class="logo_container title">
-            <span>Locher</span><img src="./img/locher_star.png" alt="Locher_ Star" class="star"><span>Projects</span> 
-          </div>
-        </div>
-        <div class="input_group"><input type="text" class="search_form" placeholder="Filter" id="search" oninput="searchOnInput()"></div>
-        <div id="projects"></div>
+  <div class="main">
+    <nav>
+      <div class="title-corner">
+        <span>Locher</span>
+        <img src="./images/locher_star.png" alt="Funky Star">
+        <span class="section-title active" id="section-top">Dev</span>
+        <span class="section-title" id="section-projects">Projects</span>
+        <span class="section-title" id="section-ramblings">Ramblings</span>
+        <span class="section-title" id="section-experiments">Experiments</span>
+        <span class="section-title" id="section-about">Me</span>
       </div>
-</body>
+      <input type="checkbox" id="sidebar-active">
+      <label id="overlay" for="sidebar-active"></label>
+      <label for="sidebar-active" class="open-sidebar-button">
+        <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32" fill="#071821"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+      </label>
+      <label for="sidebar-active" class="close-sidebar-button">
+        <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32" fill="#071821"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+      </label>
+      
+      <div class="links-container">
+        <a href="#" class="top-link">Top</a>
+        <a href="#" class="href">Projects</a>
+        <a href="#" class="href">Ramblings</a>
+        <a href="#" class="href">Experiments</a>
+        <a href="#" class="href">About</a>
+      </div>
+    </nav>
+  
+    <div class="content">
+      <section id="top">
+        <div class="half vcenter">
+          <h1>Locher's Headspace</h1>
+          <div>
+            <p>A quirky and unusual place that's filled to the brim with:</p>
+            <ul>
+              <li style="margin-left:2rem">past projects that I once put a lot of efforts in</li>
+              <li style="margin-left:3rem">fleeting thoughts that suddenly occupy my mind</li>
+              <li style="margin-left:4rem">experiments that I found interesting enough to pursue</li>
+            </ul>
+          </div>
+          <br>
+          <div>You are just here incidentally and this is fine.</div>
+        </div>
+        <div class="half vcenter">
+          <h2 style="text-align: center;">Random Image of the day</h2>
+          <a href="" id="random-source">
+            <img src="" id="random-image" alt="a randomly pulled scenery iamge from danbooru">
+          </a>
+        </div>
+        </div>
+      </section>
+      <div class="content-transition"></div>
+      <section id="projects">
+        <h1>projects</h1>
+        <div class="input_group">
+          <input type="text" class="search_form" placeholder="Filter" id="search" oninput="searchOnInput()">
+        </div>
+          <div id="projects"></div>
+      </section>
+      <div class="content-transition"></div>
+      <section id="ramblings"><h1>ramblings</h1></section>
+      <div class="content-transition"></div>
+      <section id="experiments"><h1>experiments</h1></section>
+      <div class="content-transition"></div>
+      <section id="about"><h1>https://testbooru.donmai.us/posts.json?search[is]=sfw</h1>
+        https://danbooru.donmai.us/posts.json?tags=scenery&limit=50</section>
+    </div>
+  </div>
 
-<script src="./projects.js"></script>
-<script src="./sorter.js"></script>
+
+  <script>
+    const sectionTitles = document.querySelectorAll('.section-title');
+    const sections = document.querySelectorAll('section');
+    let observerOptions = {
+      root: null, // relative to document viewport
+      rootMargin: '0px', // margin around root. Values are similar to css property. Unitless values not allowed
+      threshold: 0.7 // visible amount of item shown in relation to root
+    };
+    let observer = new IntersectionObserver(onChange, observerOptions);
+    sections.forEach(section => observer.observe(section));
+
+    
+    function onChange(changes, observer) {
+    changes.forEach(change => {
+      if (change.intersectionRatio > 0) {
+        sectionTitles.forEach(el => {
+          el.classList.remove('active');
+        });
+        let sectionTarget = document.getElementById("section-" + change.target.id);
+        sectionTarget.classList.add('active');
+      }
+    });
+  }
+  
+  // exchange with danbooru
+  fetch('https://testbooru.donmai.us/posts.json?tags=scenery&limit=50', { method: 'GET' })
+  .then(res => { return res.json() })
+  .then(data => {
+    console.log(data);
+    let images = data;
+    let rng = Math.floor(Math.random() * 50);
+    let imageContainer = document.getElementById('random-image');
+    imageContainer.src = images[rng].file_url;
+    let sourceContainer = document.getElementById('random-source');
+    sourceContainer.href = images[rng].file_url;
+  })
+  .catch(error => console.log('ERROR') );
+  </script>
+</body>
 </html>
