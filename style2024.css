@@ -51,7 +51,7 @@ body {
     overflow: clip;
 }
 
-h1, h2 {
+h1, h2, h3 {
     font-family: "RaspberryCake", monospace, Verdana, Arial;
     font-size: var(--64px);
     background: linear-gradient(to bottom, var(--light-color), var(--accent-color-2), var(--accent-color-1));
@@ -63,6 +63,14 @@ h1, h2 {
 
 h2 {
     font-size: var(--56px);
+}
+
+h3 {
+    font-size: var(--48px);
+}
+
+a {
+    color: var(--accent-color-2);
 }
 
 .random-title {
@@ -85,6 +93,7 @@ nav {
     justify-content: space-between;
     position: sticky;
     top: 0;
+    z-index: 8;
 
 }
 .title-corner {
@@ -225,7 +234,12 @@ body section:first-of-type {
     display: flex
 }
 
+
+#projects:target {margin-top: 50px}
+
+
 section {
+    scroll-margin-top: var(--64px);
     min-height: calc(100vh - var(--40px));
     margin: auto;
     max-width: 90%;
@@ -259,10 +273,84 @@ section .half {
     max-width: 100%;
 }
 
+#projects .light-font {
+    color: var(--light-color);
+}
+#projects .dark-font {
+    color: var(--dark-color);
+}
+
+
 #projects h2 {
     text-align: center;
-
 }
+
+#projects .card-title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+#projects .flex-container {
+    display: flex;
+    height: 100%;
+}
+#projects .button-toolbar {
+    display: flex;
+    justify-content: center;
+}
+
+#projects .flex-child {
+    width: 400px;
+    margin: auto;
+}
+
+#projects .flex-child p {
+    margin-bottom: 1.5rem;
+}
+
+#projects .button {
+    color: var(--light-color);
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1);
+    text-decoration: none;
+}
+
+#projects .button-primary {
+    background-color: #306850;
+    border-color: #306850;
+    margin-right: .5rem !important;
+}
+
+#projects .button:hover {
+    transform: scale(1.2);
+    color: var(--accent-color-2)
+}
+
+#projects .button-secondary {
+    background-color: #5a6268;
+    border-color: #545b62;
+    margin-right: .5rem !important;
+}
+
+#projects .flex-image {
+    display: block;
+    max-height: 450px;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 
 #project-slider-container {
     background: radial-gradient(farthest-side, var(--accent-color-1), var(--dark-color));
@@ -286,11 +374,16 @@ section .half {
     padding: 20px;
     transition: 0.5s;
     left: calc(50% - 520px);
-    top: 4vh;
+    top: 10vh;
 }
+
+.item:hover {
+    box-shadow: 0 0 10px 5px var(--accent-color-1);
+}
+
 #next-project, #prev-project {
     position: absolute;
-    top: 40%;
+    top: 50%;
     color: white;
     background-color: transparent;
     border: none;
@@ -299,6 +392,27 @@ section .half {
     font-weight: bold;
     left: 50px;
     z-index: 8;
+    transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1);
+}
+#next-project svg, #prev-project svg{
+    fill: var(--light-color);
+}
+
+#next-project:hover, #prev-project:hover {
+    transform: scale(2);
+}
+
+#next-project:hover svg, #prev-project:hover svg {
+    fill: var(--accent-color-2);
+}
+
+.hide {
+    display: none;
+}
+
+.disabled {
+    pointer-events: none;
+    cursor: default;
 }
 
 #next-project {
@@ -306,8 +420,86 @@ section .half {
     right: 50px;
 }
 
+/* PROJECT SPECIFICS */
+.kingdomsLastHand {
+    background-color: #542300;
+}
+.kingdomsLastHand h3 {
+    background: linear-gradient(to bottom, #542300, #df9830, #542300);
+    background-clip: text;
+    color: transparent;
+}
+.kingdomsLastHand p {
+    color: #EDE7E4;
+}
 
+.gaianaut {
+    background-color: #0D181A;
+}
+.gaianaut h3 {
+    background: linear-gradient(to bottom, #8B278C, #EA6F46, #8B278C);
+    background-clip: text;
+    color: transparent;
+}
+.gaianaut p {
+    color: #EDE7E4;
+}
 
+.cursorOdyssey {
+    background-color: #110626;
+}
+.cursorOdyssey h3 {
+    background: linear-gradient(to bottom, #940000, #FFFFFF, #940000);
+    background-clip: text;
+    color: transparent;
+}
+
+.demonBlasphemer {
+    background-color: #0B3043;
+}
+.demonBlasphemer h3 {
+    background: linear-gradient(to bottom, #EDFEDE, #ACD496, #519375);
+    background-clip: text;
+    color: transparent;
+}
+
+.treestroyer {
+    background-color: #2C1A0D;
+}
+.treestroyer h3 {
+    background: linear-gradient(to bottom, #94592D, #FBF5E9, #94592D);
+    background-clip: text;
+    color: transparent;
+}
+
+.softBodyDemonstration {
+    background-color: #272525;
+}
+.softBodyDemonstration h3 {
+    background: linear-gradient(to bottom, #2A4C56, #77AA97, #2A4C56);
+    background-clip: text;
+    color: transparent;
+}
+
+.wallker {
+    background-color: #C4D1D9;
+}
+.wallker h3 {
+    color: #01040B;
+}
+
+.heimweh {
+    background-color: #000;
+}
+.heimweh h3 {
+    background: linear-gradient(to bottom, #C5C5C5, #FFFFFF, #C5C5C5);
+    background-clip: text;
+    color: transparent;
+}
+
+.hexNavigator {
+    background-color: #3C3A44;
+}
 
 /* Content Falacy at 1104px */
 @media(max-width: 69rem) {
@@ -319,6 +511,23 @@ section .half {
         flex-basis: 32rem;
         margin: auto;
     }
+
+    #projects .item {
+        width: 700px;
+        left: calc(50% - 370px);
+    }
+    #projects .flex-child {
+        width: 300px;
+        font-size: var(--16px);
+    }
+    #projects .flex-child p {
+        margin-bottom: 1rem;
+        line-height: 2rem;
+    }
+    #projects .flex-image {
+        max-height: 400px;
+        max-width: 300px;
+    }
 }
 
 
@@ -329,6 +538,9 @@ section .half {
 
 /* Mobile 768px */
 @media(max-width: 48rem) {
+    section {
+        scroll-margin-top: var(--40px);
+    }
     h1 {
         font-size: var(--56px);
     }
@@ -353,5 +565,48 @@ section .half {
     }
     nav a {
         padding: 1.5rem;
+    }
+
+    #projects:target {
+        margin-top: 0px;
+    }
+    #projects .slider {
+        overflow: unset;
+    }
+    #next-project, #prev-project {
+        top: 105%;
+    }
+    #projects .flex-container {
+        flex-direction: column-reverse;
+    }
+    #projects .item {
+        height: 100%;
+        width: 100%;
+        left: unset;
+        padding: 10px 0;
+        top: unset;
+    }
+    #projects .flex-child {
+        width: 300px;
+        padding: 8px;
+        font-size: var(--16px);
+    }
+    #projects .flex-child p {
+        margin-bottom: 1rem;
+        line-height: 1.5rem;
+    }
+    #projects h3 {
+        line-height: 3rem;
+    }
+
+    #projects .right {
+        margin: 0;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 6rem;
+    }
+    #projects .flex-image {
+        max-height: 250px;
+        max-width: 300px;
     }
 }

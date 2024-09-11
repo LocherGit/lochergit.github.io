@@ -40,19 +40,19 @@
       </label>
       
       <div class="links-container">
-        <a href="#" class="top-link">
+        <a href="#top" class="top-link">
           <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#071821"><path d="M440-160v-487L216-423l-56-57 320-320 320 320-56 57-224-224v487h-80Z"/></svg> 
           <span>Top</span></a>
-        <a href="#" class="href">
+        <a href="#projects" class="href">
           <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#071821"><path d="M160-240q-33 0-56.5-23.5T80-320v-320q0-33 23.5-56.5T160-720h640q33 0 56.5 23.5T880-640v320q0 33-23.5 56.5T800-240H160Zm0-80h640v-320H160v320Zm120-40h80v-80h80v-80h-80v-80h-80v80h-80v80h80v80Zm300 0q25 0 42.5-17.5T640-420q0-25-17.5-42.5T580-480q-25 0-42.5 17.5T520-420q0 25 17.5 42.5T580-360Zm120-120q25 0 42.5-17.5T760-540q0-25-17.5-42.5T700-600q-25 0-42.5 17.5T640-540q0 25 17.5 42.5T700-480ZM160-320v-320 320Z"/></svg>
           <span>Prototypes</span></a>
-        <a href="#" class="href">
+        <a href="#ramblings" class="href">
           <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#071821"><path d="M491-339q70 0 119-45t49-109q0-57-36.5-96.5T534-629q-47 0-79.5 30T422-525q0 19 7.5 37t21.5 33l57-57q-3-2-4.5-5t-1.5-7q0-11 9-17.5t23-6.5q20 0 33 16.5t13 39.5q0 31-25.5 52.5T492-418q-47 0-79.5-38T380-549q0-29 11-55.5t31-46.5l-57-57q-32 31-49 72t-17 86q0 88 56 149.5T491-339ZM240-80v-172q-57-52-88.5-121.5T120-520q0-150 105-255t255-105q125 0 221.5 73.5T827-615l52 205q5 19-7 34.5T840-360h-80v120q0 33-23.5 56.5T680-160h-80v80h-80v-160h160v-200h108l-38-155q-23-91-98-148t-172-57q-116 0-198 81t-82 197q0 60 24.5 114t69.5 96l26 24v208h-80Zm254-360Z"/></svg>
           <span>Ramblings</span></a>
-        <a href="#" class="href">
+        <a href="#experiments" class="href">
           <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#071821"><path d="M200-120q-51 0-72.5-45.5T138-250l222-270v-240h-40q-17 0-28.5-11.5T280-800q0-17 11.5-28.5T320-840h320q17 0 28.5 11.5T680-800q0 17-11.5 28.5T640-760h-40v240l222 270q32 39 10.5 84.5T760-120H200Zm80-120h400L544-400H416L280-240Zm-80 40h560L520-492v-268h-80v268L200-200Zm280-280Z"/></svg>
           <span>Experiments</span></a>
-        <a href="#" class="href">
+        <a href="#about" class="href">
           <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#071821"><path d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Zm80-80h480v-32q0-11-5.5-20T700-306q-54-27-109-40.5T480-360q-56 0-111 13.5T260-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T560-640q0-33-23.5-56.5T480-720q-33 0-56.5 23.5T400-640q0 33 23.5 56.5T480-560Zm0-80Zm0 400Z"/></svg>
           <span>About</span></a>
       </div>
@@ -75,49 +75,202 @@
         </div>
         <div class="half vcenter">
           <div class="random-title" style="text-align: center;">Random Image of the day</div>
-          <a href="" id="random-source">
+          <a href="" id="random-source" target="_blank">
             <img src="" id="random-image" alt="a randomly pulled scenery iamge from danbooru">
           </a>
+          <div style="text-align: center;">Wait, you don't like it? <a href="javascript:randomizeDanbooru()">Randomize again</a></div>
         </div>
       </section>
       <div class="content-transition"></div>
       <section id="projects">
-        <h2>Prototypes</h2>
-
           <div id="project-slider-container">
 
             <div class="slider">
-              <div class="item">
-                <h1>Slider 1</h1>
-                <div>Lorem ipsum</div>
+              <button id="next-project"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#071821"><path d="m321-80-71-71 329-329-329-329 71-71 400 400L321-80Z"/></svg></button>
+              <button id="prev-project"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#071821"><path d="M400-80 0-480l400-400 71 71-329 329 329 329-71 71Z"/></svg></button>
+              <div class="item light-font kingdomsLastHand">
+                <div class="flex-container">
+                  <div class="flex-child left">
+                    <h3 class="card-title">Kingdom's Last Hand</h3>
+                    <p class="card-description">Protect your kingdom from alien invaders by placing unit cards who will fight for your cause.</p>
+                    <p class="card-aor">Responsibilities: Level Designer, Systems Engineer, User Experience Designer</p>
+                    <p class="card-tags">Tags: gamedev, godot, card battler, tower defense, roguelike</p>
+                    <div class="button-toolbar">
+                      <a class="button button-primary" href="https://locher.itch.io/kingdoms-last-hand" target="_blank">Itch.io</a>
+                    </div>
+                  </div>
+                  <div class="flex-child right">
+                    <a class="flex-link" href="./images/prototypes/klh_min.png" target="_blank">
+                      <img class="flex-image" src="./images/prototypes/klh_min.png" alt="Image of Kingdom's Last Hand">
+                    </a>
+                  </div>
+                </div>
               </div>
-              <div class="item">
-                <h1>Slider 2</h1>
-                <div>Lorem ipsum</div>
+              <div class="item light-font gaianaut">
+                <div class="flex-container">
+                  <div class="flex-child left">
+                    <h3 class="card-title">Gaianaut</h3>
+                    <p class="card-description">Recreate your local surroundings into a barren postapocalyptic landscape where you enter dungeons and defeat zombies.</p>
+                    <p class="card-aor">Responsibilities: Solo Developer</p>
+                    <p class="card-tags">Tags: gamedev, godot, geolocation, shooter, dungeon-crawling, procedural generation</p>
+                    <div class="button-toolbar">
+                      <a class="button button-primary" href="https://www.hdm-stuttgart.de/stage/projekt_detail/projekt_details?projekt_ID=4323" target="_blank">Project Page</a>
+                      <a class="button button-secondary" href="https://locher.itch.io/gaianaut" target="_blank">Itch.io</a>
+                    </div>
+                  </div>
+                  <div class="flex-child right">
+                    <a class="flex-link" href="./images/prototypes/gaianaut-min.png" target="_blank">
+                      <img class="flex-image" src="./images/prototypes/gaianaut-min.png" alt="Image of Gaianaut">
+                    </a>
+                  </div>
+                </div>
               </div>
-              <div class="item">
-                <h1>Slider 3</h1>
-                <div>Lorem ipsum</div>
+              <div class="item light-font cursorOdyssey">
+                <div class="flex-container">
+                  <div class="flex-child left">
+                    <h3 class="card-title">Cursor Odyssey</h3>
+                    <p class="card-description">Indirectly control a spaceship with your mouse and evade a storm of incoming asteroids.</p>
+                    <p class="card-aor">Responsibilities: Solo Developer</p>
+                    <p class="card-tags">Tags: gamedev, godot, pixelart, simulator, space</p>
+                    <div class="button-toolbar">
+                      <a class="button button-primary" href="https://github.com/locherunderscore/cursor-odyssey" target="_blank">Github</a>
+                      <a class="button button-secondary" href="https://locher.itch.io/cursor-odyssey" target="_blank">Itch.io</a>
+                    </div>
+                  </div>
+                  <div class="flex-child right">
+                    <a class="flex-link" href="https://raw.githubusercontent.com/locherunderscore/cursor-odyssey/develop/cover.jpg" target="_blank">
+                      <img class="flex-image" src="https://raw.githubusercontent.com/locherunderscore/cursor-odyssey/develop/cover.jpg" alt="Image of Cursor Odyssey">
+                    </a>
+                  </div>
+                </div>
               </div>
-              <div class="item">
-                <h1>Slider 4</h1>
-                <div>Lorem ipsum</div>
+              <div class="item light-font demonBlasphemer">
+                <div class="flex-container">
+                  <div class="flex-child left">
+                    <h3 class="card-title">The Demon and the Blasphemer</h3>
+                    <p class="card-description">A short retro gameboy game with implemented minimalistic turn-based combat, created with GB Studio.</p>
+                    <p class="card-aor">Responsibilities: Solo Developer</p>
+                    <p class="card-tags">Tags: gamedev, gbstudio, pixelart, 8bit, storydriven</p>
+                    <div class="button-toolbar">
+                      <a class="button button-primary" href="https://github.com/locherdev/demon-blasphemer-gbstudio-" target="_blank">Github</a>
+                      <a class="button button-secondary" href="https://locher.itch.io/the-demon-and-the-blasphemer" target="_blank">Itch.io</a>
+                    </div>
+                  </div>
+                  <div class="flex-child right">
+                    <a class="flex-link" href="https://raw.githubusercontent.com/locherunderscore/demon-blasphemer-gbstudio-/master/git_Title.jpg" target="_blank">
+                      <img class="flex-image" src="https://raw.githubusercontent.com/locherunderscore/demon-blasphemer-gbstudio-/master/git_Title.jpg" alt="Image of Demon and the Blasphemer">
+                    </a>
+                  </div>
+                </div>
               </div>
-              <div class="item">
-                <h1>Slider 5</h1>
-                <div>Lorem ipsum</div>
+              <div class="item light-font treestroyer">
+                <div class="flex-container">
+                  <div class="flex-child left">
+                    <h3 class="card-title">Treestroyer</h3>
+                    <p class="card-description">2d metroidvania. You control a lumberjack on his quest to save his village from an ancient curse.</p>
+                    <p class="card-aor">Responsibilities: Lead Programmer, Systems Engineer, Asset Manager</p>
+                    <p class="card-tags">Tags: gamedev, godot, metroidvania, platformer</p>
+                    <div class="button-toolbar">
+                      <a class="button button-primary" href="https://www.hdm-stuttgart.de/medianight/projekte/3341" target="_blank">Project Page</a>
+                      <a class="button button-secondary" href="https://locher.itch.io/treestroyer" target="_blank">Itch.io</a>
+                    </div>
+                  </div>
+                  <div class="flex-child right">
+                    <a class="flex-link" href="./images/prototypes/treestroyer-min.jpg" target="_blank">
+                      <img class="flex-image" src="./images/prototypes/treestroyer-min.jpg" alt="Image of Treestroyer">
+                    </a>
+                  </div>
+                </div>
               </div>
-              <div class="item">
-                <h1>Slider 6</h1>
-                <div>Lorem ipsum</div>
+              <div class="item light-font softBodyDemonstration">
+                <div class="flex-container">
+                  <div class="flex-child left">
+                    <h3 class="card-title">Soft Body Demonstration</h3>
+                    <p class="card-description">A demonstration of intimate soft-body physics via Unreal Engine 4</p>
+                    <p class="card-aor">Responsibilities: Solo Developer</p>
+                    <p class="card-tags">Tags: gamedev, simulation, ue4, platformer</p>
+                    <div class="button-toolbar">
+                      <a class="button button-primary" href="https://locher.itch.io/thesis-survey" target="_blank">Itch.io</a>
+                    </div>
+                  </div>
+                  <div class="flex-child right">
+                    <a class="flex-link" href="https://img.itch.zone/aW1hZ2UvMTEyOTY2Ny82NTU3ODkxLmpwZw==/original/%2FlUQUC.jpg" target="_blank">
+                      <img class="flex-image" src="https://img.itch.zone/aW1hZ2UvMTEyOTY2Ny82NTU3ODkxLmpwZw==/original/%2FlUQUC.jpg" alt="Image of Soft Body Demonstration">
+                    </a>
+                  </div>
+                </div>
               </div>
-              <div class="item">
-                <h1>Slider 7</h1>
-                <div>Lorem ipsum</div>
+              <div class="item dark-font wallker">
+                <div class="flex-container">
+                  <div class="flex-child left">
+                    <h3 class="card-title">Project Wallker</h3>
+                    <p class="card-description">Third person platformer. Charging vectors to dash toward specific directions and clear obstacles.</p>
+                    <p class="card-aor">Responsibilities: Level Designer, User Interface Designer, Systems Engineer</p>
+                    <p class="card-tags">Tags: gamedev, ue4, platformer</p>
+                    <div class="button-toolbar">
+                      <a class="button button-primary" href="https://github.com/locherdev/projectWallker" target="_blank">Github</a>
+                    </div>
+                  </div>
+                  <div class="flex-child right">
+                    <a class="flex-link" href="https://github.com/locherunderscore/projectWallker/raw/master/git_levelt1.jpg" target="_blank">
+                      <img class="flex-image" src="https://github.com/locherunderscore/projectWallker/raw/master/git_levelt1.jpg" alt="Image of Project Wallker">
+                    </a>
+                  </div>
+                </div>
               </div>
-
-              <button id="next-project">-></button>
-              <button id="prev-project"><-</button>
+              <div class="item light-font heimweh">
+                <div class="flex-container">
+                  <div class="flex-child left">
+                    <h3 class="card-title">Heimweh</h3>
+                    <p class="card-description">A self-authored visual novel, created in order to document its development process via Ren'Py.</p>
+                    <p class="card-aor">Responsibilities: Solo Developer</p>
+                    <p class="card-tags">Tags: gamedev, vn, renpy, python, storydriven</p>
+                    <div class="button-toolbar">
+                      <a class="button button-primary" href="https://github.com/locherdev/Heimweh" target="_blank">Github</a>
+                      <a class="button button-secondary" href="https://locher.itch.io/heimweh-renpy" target="_blank">Itch.io</a>
+                    </div>
+                  </div>
+                  <div class="flex-child right">
+                    <a class="flex-link" href="https://github.com/locherunderscore/Heimweh/raw/master/git_title.jpg" target="_blank">
+                      <img class="flex-image" src="https://github.com/locherunderscore/Heimweh/raw/master/git_title.jpg" alt="Image of Heimweh">
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="item light-font hexNavigator">
+                <div class="flex-container">
+                  <div class="flex-child left">
+                    <h3 class="card-title">Hex Navigator</h3>
+                    <p class="card-description">A brief demonstration of hexagon grid-based pathfinding with up to three agents. The demo consists of a mode with editable map and a mode for stresstests.</p>
+                    <p class="card-aor">Responsibilities: Solo Developer</p>
+                    <p class="card-tags">Tags: godot, simulation, ai, pathfinding</p>
+                    <div class="button-toolbar">
+                      <a class="button button-primary" href="https://github.com/locherdev/hex-navigator" target="_blank">Github</a>
+                      <a class="button button-secondary" href="https://locher.itch.io/hexnavigator" target="_blank">Itch.io</a>
+                    </div>
+                  </div>
+                  <div class="flex-child right">
+                    <a class="flex-link" href="https://github.com/locherunderscore/hex-navigator/raw/main/hexnavigator.png" target="_blank">
+                      <img class="flex-image" src="https://github.com/locherunderscore/hex-navigator/raw/main/hexnavigator.png" alt="Image of Hex Navigator">
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="item dark-font edventure2">
+                <div class="flex-container">
+                  <div class="flex-child left">
+                    <h3 class="card-title">Super Edventure 2</h3>
+                    <p class="card-description">An attempt at creating a retro JRPG akin to Final Fantasy 1 using JavaFX. Has a world map, cities, turn-based combat and progression.</p>
+                    <p class="card-aor">Responsibilities: Systems Engineer, Level Designer, Asset Manager</p>
+                    <p class="card-tags">Tags: gamedev, java, javafx, rpg</p>
+                  </div>
+                  <div class="flex-child right">
+                    <a class="flex-link" href="./images/prototypes/super_edventure_2-min.png" target="_blank">
+                      <img class="flex-image" src="./images/prototypes/super_edventure_2-min.png" alt="Image of Super Edventure 2">
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
 
 
@@ -135,28 +288,6 @@
       </section>
       <div class="content-transition"></div>
       <section id="ramblings">
-        <h1>ramblings</h1>
-        
-        <div id="project-template">
-          <div class="card_frame">
-            <div class="card_body">
-              <div class="flex_container">
-                <div class="flex_child">
-                  <h3 class="card_title">Cursor Odyssey</h3>
-                  <p class="card_description">Indirectly control a spaceship with your mouse and evade a storm of incoming asteroids.</p>
-                  <p class="card_tags">Tags: gamedev, godot, pixelart, simulator, space</p>
-                  <div class="button_toolbar">
-                    <a class="button button_primary" href="https://github.com/locherunderscore/cursor-odyssey">Github</a>
-                    <a class="button button_secondary" href="https://locher.itch.io/cursor-odyssey">Itch.io</a>
-                  </div>
-                </div>
-                <div class="flex_child">
-                  <a href="https://raw.githubusercontent.com/locherunderscore/cursor-odyssey/develop/cover.jpg" target="_blank"><img class="flex_image" src="https://raw.githubusercontent.com/locherunderscore/cursor-odyssey/develop/cover.jpg" alt="Image of Cursor Odyssey"></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </section>
       <div class="content-transition"></div>
       <section id="experiments"><h1>experiments</h1></section>
@@ -167,81 +298,12 @@
     </div>
   </div>
 
-
+  <script src="./prototype_data.js"></script>
+  <script src="./script.js"></script>
   <script>
-    const sectionTitles = document.querySelectorAll('.section-title');
-    const sections = document.querySelectorAll('section');
-    let observerOptions = {
-      root: null, // relative to document viewport
-      rootMargin: '0px', // margin around root. Values are similar to css property. Unitless values not allowed
-      threshold: 0.7 // visible amount of item shown in relation to root
-    };
-    let observer = new IntersectionObserver(onChange, observerOptions);
-    sections.forEach(section => observer.observe(section));
-
-    
-    function onChange(changes, observer) {
-    changes.forEach(change => {
-      if (change.intersectionRatio > 0) {
-        sectionTitles.forEach(el => {
-          el.classList.remove('active');
-        });
-        let sectionTarget = document.getElementById("section-" + change.target.id);
-        sectionTarget.classList.add('active');
-      }
+    $(document).ready(function(){
+      loadShow();
     });
-  }
-  
-  // exchange with danbooru
-  fetch('https://testbooru.donmai.us/posts.json?tags=scenery&limit=50', { method: 'GET' })
-  .then(res => { return res.json() })
-  .then(data => {
-    let images = data;
-    let rng = Math.floor(Math.random() * 50);
-    let imageContainer = document.getElementById('random-image');
-    imageContainer.src = images[rng].file_url;
-    let sourceContainer = document.getElementById('random-source');
-    sourceContainer.href = images[rng].file_url;
-  })
-  .catch(error => console.log('ERROR') );
-
-  // Create Prototype Slider
-  let items = document.querySelectorAll('.slider .item');
-  let next = document.getElementById('next-project');
-  let prev = document.getElementById('prev-project');
-  let active = 3;
-  function loadShow() {
-    let stt = 0;
-    items[active].style.transform = `none`;
-    items[active].style.zIndex = '5';
-    items[active].style.filter = 'none';
-    items[active].style.opacity = 1;
-    for( var i = active + 1; i < items.length; i++ ) {
-      stt++;
-      items[i].style.transform = `translateX(${500 * stt}px)  scale(${1 - 0.3 * stt}) perspective(24px) rotateY(-0.5deg)`;
-      items[i].style.zIndex = -stt + 5;
-      items[i].style.filter = `blur(${2.5 * stt}px)`;
-      items[i].style.opacity = 1 - (0.4 * stt);
-    }
-    stt = 0;
-    for( var i = active - 1; i >= 0; i-- ) {
-      stt++;
-      items[i].style.transform = `translateX(${-500 * stt}px)  scale(${1 - 0.3 * stt}) perspective(24px) rotateY(0.5deg)`;
-      items[i].style.zIndex = -stt + 5;
-      items[i].style.filter = `blur(${2.5 * stt}px)`;
-      items[i].style.opacity = 1 - (0.4 * stt);
-    }
-  }
-  loadShow();
-  next.onclick = function() {
-    active = active + 1 < items.length ? active + 1 : active;
-    loadShow();
-  }
-  prev.onclick = function() {
-    active = active - 1 >= 0 ? active - 1 : active;
-    loadShow();
-  }
-
   </script>
 </body>
 </html>
