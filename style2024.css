@@ -5,6 +5,7 @@
     --32px: 2rem;
     --40px: 2.5rem;
     --48px: 3rem;
+    --56px: 3.5rem;
     --64px: 4rem;
     --320px: 20rem;
     --768px: 48rem;
@@ -50,19 +51,23 @@ body {
     overflow: clip;
 }
 
-h1 {
+h1, h2 {
     font-family: "RaspberryCake", monospace, Verdana, Arial;
     font-size: var(--64px);
     background: linear-gradient(to bottom, var(--light-color), var(--accent-color-2), var(--accent-color-1));
     background-clip: text;
     color: transparent;
-    margin-bottom: 1.5rem;
+    margin: 1.5rem 0;
     line-height: 4.5rem;
 }
 
 h2 {
+    font-size: var(--56px);
+}
+
+.random-title {
     font-family: "RaspberryCake", monospace, Verdana, Arial;
-    font-size: var(--48px);
+    font-size: var(--40px);
     background: linear-gradient(to bottom, var(--light-color), var(--accent-color-2), var(--accent-color-1));
     background-clip: text;
     color: transparent;
@@ -74,7 +79,7 @@ h2 {
 
 
 nav {
-    height: 3.75rem;
+    height: var(--40px);
     background-color: var(--light-color);
     display: flex;
     justify-content: space-between;
@@ -119,14 +124,18 @@ nav {
 
 #random-image {
     width: 100%;
-    max-height: calc(70vh - 3.75rem);
+    max-height: calc(70vh - var(--40px));
     object-fit: contain;
 }
 
 nav a {
     height: 100%;
-    padding: 0 1.25rem;
+    padding: 0.75rem 1.5rem 0.75rem 0.75rem;
     margin-top: 0.25rem;
+    box-sizing: border-box;
+    height: auto;
+    width: 100%;
+    justify-content: flex-start;
     display: flex;
     align-items: center;
     text-decoration: none;
@@ -150,11 +159,11 @@ nav svg {
 .open-sidebar-button, .close-sidebar-button {
     display: flex;
     align-self: center;
-    padding: 1rem;
+    padding: 0.5rem;
 }
 .open-sidebar-button:hover svg, .close-sidebar-button:hover svg {
     fill: var(--light-color);
-    transform: scale(1.3);
+    transform: scale(1.2);
 }
 .open-sidebar-button:hover, .close-sidebar-button:hover {
     background-color: var(--accent-color-1);
@@ -168,18 +177,17 @@ nav svg {
     flex-direction: column;
     align-items: flex-start;
     position: fixed;
-    top: 3.75rem;
+    top: var(--40px);
     right: -100%;
     width: 10rem;
     transition: 0.5s ease;
 }
-nav a {
-    box-sizing: border-box;
-    height: auto;
-    width: 100%;
-    padding: 1.25rem 2rem;
-    justify-content: flex-start;
+
+.links-container svg {
+    margin-right: 0.5rem;
 }
+
+
 #sidebar-active:checked ~ .links-container {
     display: flex;
     right: 0;
@@ -206,7 +214,7 @@ nav a {
 /* TOP CONTENT */
 
 .content {
-    font-size: 1.5rem;
+    font-size: var(--20px);
     color: var(--light-color);
 }
 .content div {
@@ -218,9 +226,9 @@ body section:first-of-type {
 }
 
 section {
-    min-height: calc(100vh - 3.75rem);
+    min-height: calc(100vh - var(--40px));
     margin: auto;
-    max-width: 80%;
+    max-width: 90%;
 }
 
 section .half {
@@ -240,40 +248,108 @@ section .half {
 
 
 
+.ladder-2 { margin-left:2rem }
+.ladder-3 { margin-left:3rem }
+.ladder-4 { margin-left:4rem }
+
+
+/* PROJECTS */
+
+#projects {
+    max-width: 100%;
+}
+
+#projects h2 {
+    text-align: center;
+
+}
+
+#project-slider-container {
+    background: radial-gradient(farthest-side, var(--accent-color-1), var(--dark-color));
+    min-height: calc(90vh - var(--56px));
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+.slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+.item {
+    position: absolute;
+    width: 1000px;
+    height: 600px;
+    text-align: justify;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    padding: 20px;
+    transition: 0.5s;
+    left: calc(50% - 520px);
+    top: 4vh;
+}
+#next-project, #prev-project {
+    position: absolute;
+    top: 40%;
+    color: white;
+    background-color: transparent;
+    border: none;
+    font-size: xxx-large;
+    font-family: monospace;
+    font-weight: bold;
+    left: 50px;
+    z-index: 8;
+}
+
+#next-project {
+    left: unset;
+    right: 50px;
+}
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Up until PC */
-@media(min-width: 22rem) {
-    .title-corner {
-        font-size: var(--40px);
+/* Content Falacy at 1104px */
+@media(max-width: 69rem) {
+    section {
+        flex-direction: column;
+        max-width: 85%;
+    }
+    section .half {
+        flex-basis: 32rem;
+        margin: auto;
     }
 }
 
-/* Mobile */
-@media(max-width: 21.99rem) {
+
+/* Up until PC 1024px */
+@media(max-width: 64rem) {
+
+}
+
+/* Mobile 768px */
+@media(max-width: 48rem) {
+    h1 {
+        font-size: var(--56px);
+    }
+    .random-title {
+        font-size: var(--32px);
+    }
+    .content {
+        font-size: 1rem;
+    }
+    .content div {
+        line-height: 2rem;
+    }
+    .ladder-2, .ladder-3, .ladder-4 {
+        margin-left: 1rem;
+    }
+    section .half {
+        flex-basis: 30rem;
+    }
+
     .links-container {
-        width: 8rem;
+        width: 14rem;
     }
     nav a {
         padding: 1.5rem;
