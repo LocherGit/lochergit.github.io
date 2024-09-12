@@ -27,7 +27,7 @@
         <span class="section-title active" id="section-top">Dev</span>
         <span class="section-title" id="section-projects">Prototypes</span>
         <span class="section-title" id="section-ramblings">Ramblings</span>
-        <span class="section-title" id="section-experiments">Experiments</span>
+        <span class="section-title" id="section-heap">Heap</span>
         <span class="section-title" id="section-about">Me</span>
       </div>
       <input type="checkbox" id="sidebar-active">
@@ -49,9 +49,9 @@
         <a href="#ramblings" class="href">
           <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#071821"><path d="M491-339q70 0 119-45t49-109q0-57-36.5-96.5T534-629q-47 0-79.5 30T422-525q0 19 7.5 37t21.5 33l57-57q-3-2-4.5-5t-1.5-7q0-11 9-17.5t23-6.5q20 0 33 16.5t13 39.5q0 31-25.5 52.5T492-418q-47 0-79.5-38T380-549q0-29 11-55.5t31-46.5l-57-57q-32 31-49 72t-17 86q0 88 56 149.5T491-339ZM240-80v-172q-57-52-88.5-121.5T120-520q0-150 105-255t255-105q125 0 221.5 73.5T827-615l52 205q5 19-7 34.5T840-360h-80v120q0 33-23.5 56.5T680-160h-80v80h-80v-160h160v-200h108l-38-155q-23-91-98-148t-172-57q-116 0-198 81t-82 197q0 60 24.5 114t69.5 96l26 24v208h-80Zm254-360Z"/></svg>
           <span>Ramblings</span></a>
-        <a href="#experiments" class="href">
-          <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#071821"><path d="M200-120q-51 0-72.5-45.5T138-250l222-270v-240h-40q-17 0-28.5-11.5T280-800q0-17 11.5-28.5T320-840h320q17 0 28.5 11.5T680-800q0 17-11.5 28.5T640-760h-40v240l222 270q32 39 10.5 84.5T760-120H200Zm80-120h400L544-400H416L280-240Zm-80 40h560L520-492v-268h-80v268L200-200Zm280-280Z"/></svg>
-          <span>Experiments</span></a>
+        <a href="#heap" class="href">
+          <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#071821"><path d="M200-80q-33 0-56.5-23.5T120-160v-451q-18-11-29-28.5T80-680v-120q0-33 23.5-56.5T160-880h640q33 0 56.5 23.5T880-800v120q0 23-11 40.5T840-611v451q0 33-23.5 56.5T760-80H200Zm0-520v440h560v-440H200Zm-40-80h640v-120H160v120Zm200 280h240v-80H360v80Zm120 20Z"/></svg>
+          <span>Heap</span></a>
         <a href="#about" class="href">
           <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#071821"><path d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Zm80-80h480v-32q0-11-5.5-20T700-306q-54-27-109-40.5T480-360q-56 0-111 13.5T260-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T560-640q0-33-23.5-56.5T480-720q-33 0-56.5 23.5T400-640q0 33 23.5 56.5T480-560Zm0-80Zm0 400Z"/></svg>
           <span>About</span></a>
@@ -65,9 +65,9 @@
           <div>
             <p>A quirky and unusual place that's filled to the brim with:</p>
             <ul>
-              <li class="ladder-2">working game prototypes that I once put a lot of efforts in</li>
+              <li class="ladder-2">archived game prototypes that I once put a lot of efforts in</li>
               <li class="ladder-3">fleeting thoughts that suddenly occupy my mind</li>
-              <li class="ladder-4">experiments that I found interesting enough to pursue</li>
+              <li class="ladder-4">heaps of things I do not want to lose</li>
             </ul>
           </div>
           <br>
@@ -186,7 +186,7 @@
                 <div class="flex-container">
                   <div class="flex-child left">
                     <h3 class="card-title">Soft Body Demonstration</h3>
-                    <p class="card-description">A demonstration of intimate soft-body physics via Unreal Engine 4</p>
+                    <p class="card-description">A demonstration of intimate soft-body physics created with Unreal Engine 4</p>
                     <p class="card-aor">Responsibilities: Solo Developer</p>
                     <p class="card-tags">Tags: gamedev, simulation, ue4, platformer</p>
                     <div class="button-toolbar">
@@ -283,22 +283,122 @@
 
 
 
-
           </div>
       </section>
       <div class="content-transition"></div>
       <section id="ramblings">
       </section>
       <div class="content-transition"></div>
-      <section id="experiments"><h1>experiments</h1></section>
+      <section id="heap"><h1>heap</h1></section>
       <div class="content-transition"></div>
-      <section id="about"><h1>https://testbooru.donmai.us/posts.json?search[is]=sfw</h1></section>
+      <section id="about">
+        <label>
+          <input type="checkbox"/>
+          <div class="flip-card">
+            <div class="front">
+              <div class="about-image">
+                <img src="./images/favicons/android-chrome-512x512.png" alt="Locherdev's website icon"/>
+              </div>
+              <div class="about-name">Locherdev</div>
+              <div class="about-title">Hobby Game Developer</div>
+              <div class="social-container">
+                <a href="https://github.com/locherdev" target="_blank">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" height="64px" width="64px">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z" fill="#E0F8CF"/>
+                  </svg>
+                </a>
+                <a href="https://discord.com/users/173169494137503745" target="_blank">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 127.14 96.36" height="64px" width="64px">
+                    <path fill="#E0F8CF" d="M107.7,8.07A105.15,105.15,0,0,0,81.47,0a72.06,72.06,0,0,0-3.36,6.83A97.68,97.68,0,0,0,49,6.83,72.37,72.37,0,0,0,45.64,0,105.89,105.89,0,0,0,19.39,8.09C2.79,32.65-1.71,56.6.54,80.21h0A105.73,105.73,0,0,0,32.71,96.36,77.7,77.7,0,0,0,39.6,85.25a68.42,68.42,0,0,1-10.85-5.18c.91-.66,1.8-1.34,2.66-2a75.57,75.57,0,0,0,64.32,0c.87.71,1.76,1.39,2.66,2a68.68,68.68,0,0,1-10.87,5.19,77,77,0,0,0,6.89,11.1A105.25,105.25,0,0,0,126.6,80.22h0C129.24,52.84,122.09,29.11,107.7,8.07ZM42.45,65.69C36.18,65.69,31,60,31,53s5-12.74,11.43-12.74S54,46,53.89,53,48.84,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.25,60,73.25,53s5-12.74,11.44-12.74S96.23,46,96.12,53,91.08,65.69,84.69,65.69Z"/>
+                  </svg>
+                </a>
+                <a href="https://www.youtube.com/@LocherYT" target="_blank">
+                  <svg xmlns="http://www.w3.org/2000/svg" height="64px" width="64px" viewBox="0 0 461.001 461.001">
+                  <path fill="#E0F8CF" d="M365.257,67.393H95.744C42.866,67.393,0,110.259,0,163.137v134.728
+                    c0,52.878,42.866,95.744,95.744,95.744h269.513c52.878,0,95.744-42.866,95.744-95.744V163.137
+                    C461.001,110.259,418.135,67.393,365.257,67.393z M300.506,237.056l-126.06,60.123c-3.359,1.602-7.239-0.847-7.239-4.568V168.607
+                    c0-3.774,3.982-6.22,7.348-4.514l126.06,63.881C304.363,229.873,304.298,235.248,300.506,237.056z"/>
+                </svg>
+                </a>
+              </div>
+            </div>
+            <div class="back">
+              <h1>About me</h1>
+              <hr>
+              <p>some text</p>
+              <hr>
+              <p class="flip">Click to flip</p>
+            </div>
+          </div>
+        </label>
+        <div class="bubbleContainer">
+          <div class="bubbles">
+            <span style="--i:11;"></span>
+            <span style="--i:12;"></span>
+            <span style="--i:24;"></span>
+            <span style="--i:10;"></span>
+            <span style="--i:14;"></span>
+            <span style="--i:23;"></span>
+            <span style="--i:18;"></span>
+            <span style="--i:16;"></span>
+            <span style="--i:19;"></span>
+            <span style="--i:20;"></span>
+            <span style="--i:22;"></span>
+            <span style="--i:25;"></span>
+            <span style="--i:18;"></span>
+            <span style="--i:21;"></span>
+            <span style="--i:15;"></span>
+            <span style="--i:13;"></span>
+            <span style="--i:26;"></span>
+            <span style="--i:17;"></span>
+            <span style="--i:13;"></span>
+            <span style="--i:28;"></span>
+            <span style="--i:11;"></span>
+            <span style="--i:19;"></span>
+            <span style="--i:23;"></span>
+            <span style="--i:21;"></span>
+            <span style="--i:15;"></span>
+            <span style="--i:28;"></span>
+            <span style="--i:12;"></span>
+            <span style="--i:14;"></span>
+            <span style="--i:28;"></span>
+            <span style="--i:25;"></span>
+            <span style="--i:11;"></span>
+            <span style="--i:16;"></span>
+            <span style="--i:19;"></span>
+            <span style="--i:25;"></span>
+            <span style="--i:14;"></span>
+            <span style="--i:11;"></span>
+            <span style="--i:25;"></span>
+            <span style="--i:17;"></span>
+            <span style="--i:13;"></span>
+            <span style="--i:28;"></span>
+            <span style="--i:21;"></span>
+            <span style="--i:15;"></span>
+            <span style="--i:13;"></span>
+            <span style="--i:26;"></span>
+            <span style="--i:17;"></span>
+            <span style="--i:13;"></span>
+            <span style="--i:28;"></span>
+            <span style="--i:26;"></span>
+            <span style="--i:17;"></span>
+            <span style="--i:13;"></span>
+            <span style="--i:28;"></span>
+          </div>
+        </div>
+        <div class="footerWave wave1"></div>
+        <div class="footerWave wave2"></div>
+        <div class="footerWave wave3"></div>
+        <div class="footerWave wave4"></div>
+      </section>
     </div>
 
     </div>
   </div>
 
-  <script src="./prototype_data.js"></script>
+  <footer>
+  </footer>
+
   <script src="./script.js"></script>
   <script>
     $(document).ready(function(){
