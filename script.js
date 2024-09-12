@@ -22,9 +22,9 @@ changes.forEach(change => {
 });
 }
 
-// exchange with danbooru
+// exchange with danbooru / testbooru
 var danbooru_results = null;
-fetch('https://testbooru.donmai.us/posts.json?tags=scenery&limit=50', { method: 'GET' })
+fetch('https://danbooru.donmai.us/posts.json?tags=scenery&limit=50', { method: 'GET' })
 .then(res => { return res.json() })
 .then(data => {
   console.log("SUCCESS: Initializing Danbooru results succeeded");
@@ -103,15 +103,13 @@ prev.onclick = function() {
 }
 loadShow();
 
+// Handle Rambling Items random teleport fading sequence
 const transition_fadeOut = [{opacity: 1},{opacity: 0}];
 const transition_fadeIn  = [{opacity: 0},{opacity: 1}];
 const timing = {duration: 1500 };
 const ramblingItems = document.getElementsByClassName("rambling-item");
 const ramblingArray = Array.from(ramblingItems);
 const boundingBox = document.getElementById("ramblings").getBoundingClientRect();
-
-console.log(boundingBox);
-
 function moveDiv() {
   ramblingArray.forEach(el => {
     el.animate(transition_fadeOut, timing);
