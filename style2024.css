@@ -31,6 +31,12 @@
     font-family: "RaspberryCake";
     src: url("./font/RaspberryCake-1Glme.ttf") format("truetype");
 }
+
+@font-face {
+    font-family: "ReallyFree";
+    src: url("./font/ReallyFree-ALwl7.ttf") format("truetype");
+}
+
   
 * {
     margin: 0;
@@ -69,6 +75,11 @@ h3 {
     font-size: var(--48px);
 }
 
+.handwriting, .handwriting p {
+    font-family: "ReallyFree", monospace, Verdana, Arial;
+    font-size: var(--40px);
+
+}
 a {
     color: var(--accent-color-2);
 }
@@ -273,10 +284,10 @@ section .half {
     max-width: 100%;
 }
 
-#projects .light-font {
+.light-font, .light-font p {
     color: var(--light-color);
 }
-#projects .dark-font {
+.dark-font, .dark-font p {
     color: var(--dark-color);
 }
 
@@ -617,6 +628,11 @@ section .half {
     font-size: var(--48px);
     margin-bottom: 1.5rem;
 }
+#about .about-back {
+    height: 100%;
+    padding: 1rem;
+    text-align: justify;
+}
 #about .social-container {
     display: flex;
     justify-content: center;
@@ -842,5 +858,43 @@ section .half {
     #projects .flex-image {
         max-height: 250px;
         max-width: 300px;
+    }
+
+
+    #about label {
+        top: unset;
+        left: unset;
+        transform: unset;
+        width: calc(100% - 2.5rem);
+        height: 44%;
+        perspective: 500px;
+        margin: 4rem 1rem 1rem 1rem;
+    }
+    #about .flip-card {
+        height: 150%;
+    }
+    #about .flip-card .front, #about .flip-card .back {
+        border: 0.25rem solid #000;
+    }
+    #about .about-title {
+        font-size: var(--32px);
+    }
+    #about .flip-card .back {
+        border: 0.25rem solid var(--light-color);
+    }
+    #about .about-back {
+        padding: 1.5rem;
+    }
+    .handwriting p {
+        font-size: var(--32px);
+    }
+    #about .footerWave {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 50px;
+        background: url(./images/wave.png);
+        background-size: 500px 50px;
     }
 }
