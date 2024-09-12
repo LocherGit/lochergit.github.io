@@ -29,20 +29,35 @@ fetch('https://danbooru.donmai.us/posts.json?tags=scenery&limit=50', { method: '
 .then(data => {
   console.log("SUCCESS: Initializing Danbooru results succeeded");
   danbooru_results = data;
-  let rng = Math.floor(Math.random() * 50);
+  let rng
+  while(true) {
+    rng = Math.floor(Math.random() * danbooru_results.length);
+    console.log("danbooru rng: ", + rng);
+    if( isImage(danbooru_results[rng].file_url)) {
+      break;
+    }
+    console.log("Removing non-image out of danbooru results: ");
+    console.log(danbooru_results[rng]);
+    danbooru_results.splice(rng, 1);
+  }
   let imageContainer = document.getElementById('random-image');
-  imageContainer.src = danbooru_results[rng].media_asset.variants[3].url;
-  let sourceContainer = document.getElementById('random-source');
-  sourceContainer.href = danbooru_results[rng].file_url;
+  imageContainer.src = danbooru_results[rng].media_asset.variants[2].url;
+  let sourceImageContainer = document.getElementById('random-source-image');
+  sourceImageContainer.href = danbooru_results[rng].large_file_url;
 })
 .catch(error => console.log('ERROR: Initializing Danbooru results failed') );
 
 function randomizeDanbooru() {
-    let rng = Math.floor(Math.random() * 50);
-    let imageContainer = document.getElementById('random-image');
-    imageContainer.src = danbooru_results[rng].media_asset.variants[3].url;
-    let sourceContainer = document.getElementById('random-source');
-    sourceContainer.href = danbooru_results[rng].file_url;
+
+  let rng = Math.floor(Math.random() * danbooru_results.length);
+  let imageContainer = document.getElementById('random-image');
+  imageContainer.src = danbooru_results[rng].media_asset.variants[2].url;
+  let sourceImageContainer = document.getElementById('random-source-image');
+  sourceImageContainer.href = danbooru_results[rng].large_file_url;
+}
+function isImage(filename) {
+  let extension = filename.split('.').pop();
+  return ["png", "PNG", "jpg", "JPG"].includes(extension);
 }
 
 // Create Prototype Slider

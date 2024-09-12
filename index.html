@@ -76,7 +76,12 @@
         </div>
         <div class="half vcenter">
           <div class="random-title" style="text-align: center;">Randomized Image for You</div>
-          <a href="" id="random-source" target="_blank">
+          <video width="320" height="240" autoplay id="random-source-video" class="hide">
+            <source src="movie.mp4" type="video/mp4">
+            <source src="movie.ogg" type="video/ogg">
+          Your browser does not support the video tag.
+          </video> 
+          <a href="" id="random-source-image" target="_blank">
             <img src="" id="random-image" alt="a randomly pulled scenery iamge from danbooru">
           </a>
           <div style="text-align: center;">Wait, you don't like it? <a href="javascript:randomizeDanbooru()">Randomize again</a></div>
