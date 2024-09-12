@@ -101,5 +101,35 @@ prev.onclick = function() {
     }
     loadShow();
 }
-
 loadShow();
+
+const transition_fadeOut = [{opacity: 1},{opacity: 0}];
+const transition_fadeIn  = [{opacity: 0},{opacity: 1}];
+const timing = {duration: 1500 };
+const ramblingItems = document.getElementsByClassName("rambling-item");
+const ramblingArray = Array.from(ramblingItems);
+const boundingBox = document.getElementById("ramblings").getBoundingClientRect();
+
+console.log(boundingBox);
+
+function moveDiv() {
+  ramblingArray.forEach(el => {
+    el.animate(transition_fadeOut, timing);
+    let itemBox = el.getBoundingClientRect();
+    var maxLeft = boundingBox.width - itemBox.width;
+    var maxTop = boundingBox.height - itemBox.height;
+    var leftPos = Math.floor(Math.random() * (maxLeft + 1))
+    var topPos = Math.floor(Math.random() * (maxTop + 1))
+    el.style.left = leftPos;
+    el.style.top = topPos;
+    el.setAttribute('style', "left: " + leftPos + "px; top:" + topPos + "px");
+    el.animate(transition_fadeIn, timing);
+  });
+};
+
+moveDiv();
+setInterval(moveDiv, 10000);
+
+function ramblings(rambItem) {
+  window.open("./ramblings/?file="+rambItem, '_blank');
+}

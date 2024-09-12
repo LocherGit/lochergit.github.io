@@ -1,0 +1,61 @@
+/* transcripts - markdown styling */
+* {
+  line-height: 2;
+  padding: 10px;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 0;
+  font-family: "RaspberryCake", monospace, Verdana, Arial;
+  font-size: 6rem;
+  background: linear-gradient(to bottom, var(--light-color), var(--accent-color-2), var(--accent-color-1));
+  background-clip: text;
+  color: transparent;
+  margin: 1.5rem 0;
+  line-height: 4.5rem;
+}
+
+p,
+li {
+  color: var(--light-color);
+  font-size: var(--32px);
+  text-align: left;
+}
+
+em {
+  color: #86c06c;
+  font-style: normal;
+  padding: 0;
+}
+
+ul {
+  padding: 10px 10px 10px 20px;
+}
+
+li {
+  margin-bottom: 20px;
+  list-style-type: square;
+}
+
+hr {
+  padding: 0;
+}
+
+@media(max-width: 69rem) {
+  h1 {
+    font-size: 4rem;
+  }
+  p, li {
+    font-size: var(--24px);
+  }
+}
+
+@media(max-width: 48rem) {
+  h1 {
+    font-size: 3rem;
+  }
+  p, li {
+    font-size: var(--16px);
+  }
+}

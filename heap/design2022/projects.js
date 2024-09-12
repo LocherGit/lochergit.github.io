@@ -1,7 +1,7 @@
 const projects = [
     {
         title: "Kingdom's Last Hand",
-        image: "/img/klh_min.png",
+        image: "./img/klh_min.png",
         description: "Protect your kingdom from alien invaders by placing unit cards who will fight for your cause.",
         tags: "gamedev, godot, card battler, tower defense, roguelike",
         linkname_one: "Itch.io",
@@ -9,7 +9,7 @@ const projects = [
     },
     {
         title: "Gaianaut",
-        image: "/img/gaianaut_min.png",
+        image: "./img/gaianaut_min.png",
         description: "Recreate your local surroundings into a barren postapocalyptic landscape where you enter dungeons and defeat zombies.",
         tags: "gamedev, godot, geolocation, shooter, dungeon-crawling, procedural generation",
         linkname_one: "Project Page",
@@ -29,7 +29,7 @@ const projects = [
     },
     {
         title: "Treestroyer",
-        image: "/img/treestroyer-min.jpg",
+        image: "./img/treestroyer-min.jpg",
         description: "Group project, 2d metroidvania. You control a lumberjack on his quest to save his village from an ancient curse.",
         tags: "gamedev, godot, metroidvania, platformer",
         linkname_one: "Project Page",
@@ -55,7 +55,7 @@ const projects = [
     },
     {
         title: "Super Edventure 2",
-        image: "/img/super_edventure_2-min.png",
+        image: "./img/super_edventure_2-min.png",
         description: "Group project, 2d RPG. Travel in a dragon quest-like world while doing guild quests and advancing the narrative.",
         tags: "gamedev, java, javafx, rpg"
     },

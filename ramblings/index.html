@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Locher's Ramblings</title>
+  <link rel="icon" type="image/x-icon" href="./../images/favicons/favicon.ico"/>
+  <link rel="icon" type="image/png" sizes="16x16" href="./../images/favicons/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./../images/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="./../images/favicons/android-chrome-512x512.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="./../images/favicons/android-chrome-192x192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="./../images/favicons/apple-touch-icon.png" />
+  <link rel="stylesheet" type="text/css" href="./../style2024.css" />
+
+  <meta name="author" content="Locher_" />
+  <meta property="og:title" content="Locher's Headspace">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@1/src/zero-md.min.js"></script>
+</head>
+
+<body>
+  <div class="main">
+    <nav>
+      <div class="title-corner">
+        <span>Locher</span>
+        <img src="./../images/locher_star.png" alt="Funky Star">
+        <span class="section-title active" id="section-top">Ramblings</span>
+      </div>
+      <div class="rambling-button">
+          <a href="./../index.html" class="button">Return</a>
+      </div> 
+    </nav>
+  
+    <div id="rambling-content">
+      <zero-md id="md-source" css-urls='["./markdown.css"]' src=""></zero-md>
+    </div>
+  </div>
+  <script>
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const title = urlParams.get('file')
+    document.getElementById('md-source').src = "./" + title + ".md";
+  </script>
+</body>
+</html>

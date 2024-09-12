@@ -10,7 +10,7 @@
   <link rel="icon" type="image/png" sizes="192x192" href="./images/favicons/android-chrome-192x192.png">
   <link rel="apple-touch-icon" sizes="180x180" href="./images/favicons/apple-touch-icon.png" />
   <link rel="stylesheet" type="text/css" href="./style2024.css" />
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
 
   <meta name="author" content="Locher_" />
   <meta property="og:title" content="Locher's Headspace">
@@ -274,26 +274,31 @@
                 </div>
               </div>
             </div>
-
-
-
-
-
-
-
-
-
-
-
           </div>
       </section>
+
       <div class="content-transition"></div>
+
       <section id="ramblings">
         <h2 class="hide">Ramblings Section</h2>
+        <div id="ramblings-container">
+          <a href="javascript:ramblings('template')" class="button rambling-item">Rambling Template</a>
+        </div>
       </section>
+
       <div class="content-transition"></div>
+
       <section id="heap">
         <h2 class="hide">Heap Section</h2>
+        <div class="heap-container">
+          <div class="heap-designs">
+            <h3>Old Webpage Designs</h3>
+            <ul>
+              <li><a href="./heap/design2022/index2022.html" target="_blank" class="button">Design 2022</a></li>
+              <li><a href="./heap/design2020/index2020.html" target="_blank" class="button">Design 2020</a></li>
+            </ul>
+          </div>
+        </div>
       </section>
       <div class="content-transition"></div>
       <section id="about">
@@ -305,7 +310,7 @@
               <div class="about-image">
                 <img src="./images/favicons/android-chrome-512x512.png" alt="Locherdev's website icon"/>
               </div>
-              <div class="about-name">Locherdev</div>
+              <div class="about-name">Locher</div>
               <div class="about-title">Hobby Game Developer</div>
               <div class="social-container">
                 <a href="https://github.com/locherdev" target="_blank">
@@ -396,20 +401,12 @@
         <div class="footerWave wave2"></div>
         <div class="footerWave wave3"></div>
         <div class="footerWave wave4"></div>
+        <div class="pseudo-footer">@2024 Locher</div>
       </section>
     </div>
 
     </div>
   </div>
-
-  <footer>
-  </footer>
-
   <script src="./script.js"></script>
-  <script>
-    $(document).ready(function(){
-      loadShow();
-    });
-  </script>
 </body>
 </html>
