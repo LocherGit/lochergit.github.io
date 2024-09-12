@@ -1,0 +1,69 @@
+<div class="mobile_logo">
+  <a href="./">
+    <img src="./img/logo.png" alt="locher_underscore_logo" />
+  </a>
+  <a class="lang de active" href="#de">
+    <span class="iconify" data-icon="emojione-v1:flag-for-flag-germany" data-inline="false"></span>
+  </a>
+  <a class="lang en inactive" href="#en" onClick="change_language('en');">
+    <span class="iconify" data-icon="twemoji:flag-for-flag-us-outlying-islands" data-inline="false"></span>
+  </a>
+</div>
+<div class="mobile_canvas">
+  <button type="button" class="menu_icon__open" onclick="openNav()"><span></span> <span></span> <span></span></button>
+</div>
+<div id="off_canvas">
+  <div id="mobile_title" class="navtitle">Locher_Underscore</div>
+  <div class="sidenav">
+    <a href="./">Start</a>
+    <a href="./werke.html">Werke</a>
+    <a href="./ressourcen.html">Ressourcen</a>
+    <a class="invisible" href="./thoughts.html">Thoughts</a>
+  </div>
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+</div>
+
+<script>
+  $(document).ready(function() {
+    $("#mobile_title").text(document.title);
+  });
+  function openNav() {
+    $(".menu_icon__open").addClass("active");
+    document.getElementById("off_canvas").style.top = "0";
+  }
+
+  function closeNav() {
+    $(".menu_icon__open").removeClass("active");
+    document.getElementById("off_canvas").style.top = "100%";
+  }
+
+  function change_language($redirect_to_lang) {
+    if ($redirect_to_lang == "en") {
+      // Deutsche Seite -> Umleitung auf Englische Seite
+      switch (document.title) {
+        case "Locher_Werke":
+          window.location.href = "./works.html";
+          break;
+        case "Locher_Ressourcen":
+          window.location.href = "./resources.html";
+          break;
+        case "Locher_Start":
+        default:
+          window.location.href = "./home.html";
+      }
+    } else {
+      // Englische Seite -> Umleitung auf Deutsche Seite
+      switch (document.title) {
+        case "Locher_Works":
+          window.location.href = "./werke.html";
+          break;
+        case "Locher_Resources":
+          window.location.href = "./ressourcen.html";
+          break;
+        case "Locher_Home":
+        default:
+          window.location.href = "./start.html";
+      }
+    }
+  }
+</script>

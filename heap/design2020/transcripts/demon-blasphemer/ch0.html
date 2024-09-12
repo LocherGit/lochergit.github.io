@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>The Demon and the Blasphemer - Chapter 0</title>
+    <link rel="stylesheet" type="text/css" href="./../../css/global_style.css" />
+    <link rel="icon" href="/favicon.ico" type="image/vnd.microsoft.icon" />
+    <meta name="author" content="Locher_Underscore" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://code.iconify.design/1/1.0.3/iconify.min.js"></script>
+    <script src="./../../js/loading_partials.js"></script>
+    <script src="./../../js/transcripts_functionality.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@webcomponents/webcomponentsjs@2/webcomponents-loader.min.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@1/src/zero-md.min.js"></script>
+  </head>
+  <body class="transcripts">
+    <header class="desktop no_lang" data-include="header"></header>
+    <header class="mobile no_lang" data-include="header_mobile"></header>
+    <div class="mobile_reader-theme">
+      <div id="mobile_day" onclick="switchTheme()">
+        <i class="iconify" data-icon="whh:day" data-inline="false"></i>
+      </div>
+      <div id="mobile_night" style="display: none;" onclick="switchTheme()">
+        <i class="iconify" data-icon="mdi:power-sleep" data-inline="false"></i>
+      </div>
+    </div>
+    <div id="transcript-container" class="mainContainer dark">
+      <div id="reader-theme">
+        <button id="theme-button" onclick="switchTheme()">
+          <h1 id="theme-title">Change to Light Mode</h1>
+        </button>
+      </div>
+      <hr class="non-mobile" />
+      <span id="light_ver" style="display: none;">
+        <zero-md css-urls='["./../../css/transcripts_style_light.css"]' src="./ch0.md"></zero-md>
+      </span>
+      <span id="dark_ver" style="display: inline;">
+        <zero-md css-urls='["./../../css/transcripts_style_dark.css"]' src="./ch0.md"></zero-md>
+      </span>
+    </div>
+    <footer id="footer" data-include="footer"></footer>
+    <div class="to-top">
+      <a href="#top" id="prev_chapter"><i class="iconify" data-icon="ic:twotone-keyboard-arrow-left" data-inline="false"></i></a>
+      <a href="#top" id="to-top" style="opacity: 0;"><i class="iconify" data-icon="ic:twotone-keyboard-arrow-up" data-inline="false"></i></a>
+      <a href="#top" id="next_chapter"><i class="iconify" data-icon="ic:twotone-keyboard-arrow-right" data-inline="false"></i></a>
+    </div>
+  </body>
+</html>

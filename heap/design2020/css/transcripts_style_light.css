@@ -1,0 +1,37 @@
+/* transcripts - markdown styling */
+* {
+  margin-bottom: 40px;
+  line-height: 2;
+  padding: 10px;
+  color: #071821 !important;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 0;
+}
+
+p,
+li {
+  font-size: 20px;
+  text-align: left;
+}
+
+em {
+  color: #86c06c;
+  font-style: normal;
+  padding: 0;
+}
+
+ul {
+  padding: 10px 10px 10px 20px;
+}
+
+li {
+  margin-bottom: 20px;
+  list-style-type: square;
+}
+
+hr {
+  padding: 0;
+}

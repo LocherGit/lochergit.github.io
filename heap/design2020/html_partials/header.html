@@ -1,0 +1,59 @@
+<div>
+  <a href="./index2020.html">
+    <img src="./img/logo.png" alt="locher_underscore_logo" />
+  </a>
+  <a class="lang de inactive" href="#de" onClick="change_language('de');">
+    <span class="iconify" data-icon="emojione-v1:flag-for-flag-germany" data-inline="false"></span>
+  </a>
+  <a class="lang en active" href="#en">
+    <span class="iconify" data-icon="twemoji:flag-for-flag-us-outlying-islands" data-inline="false"></span>
+  </a>
+</div>
+<div class="title">
+  <h1 id="title">Locher_Underscore</h1>
+</div>
+<ul>
+  <li><a href="./home.html">Home</a></li>
+  <li><a href="./works.html">Works</a></li>
+  <li><a href="./resources.html">Resources</a></li>
+</ul>
+<span class="thoughts invisible">
+  <a href="./thoughts.html">
+    <span class="thoughts_padding">Thoughts</span>
+  </a>
+</span>
+<script>
+  $(document).ready(function() {
+    $("#title").text(document.title);
+  });
+
+  function change_language($redirect_to_lang) {
+    if ($redirect_to_lang == "en") {
+      // Deutsche Seite -> Umleitung auf Englische Seite
+      switch (document.title) {
+        case "Locher_Werke":
+          window.location.href = "./works.html";
+          break;
+        case "Locher_Ressourcen":
+          window.location.href = "./resources.html";
+          break;
+        case "Locher_Start":
+        default:
+          window.location.href = "./home.html";
+      }
+    } else {
+      // Englische Seite -> Umleitung auf Deutsche Seite
+      switch (document.title) {
+        case "Locher_Works":
+          window.location.href = "./werke.html";
+          break;
+        case "Locher_Resources":
+          window.location.href = "./ressourcen.html";
+          break;
+        case "Locher_Home":
+        default:
+          window.location.href = "./start.html";
+      }
+    }
+  }
+</script>
