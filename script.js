@@ -24,7 +24,7 @@ changes.forEach(change => {
 
 // exchange with danbooru / testbooru
 var danbooru_results = null;
-fetch('https://danbooru.donmai.us/posts.json?tags=scenery&limit=50', { method: 'GET' })
+fetch('https://danbooru.donmai.us/posts.json?tags=scenery&limit=100', { method: 'GET' })
 .then(res => { return res.json() })
 .then(data => {
   console.log("SUCCESS: Initializing Danbooru results succeeded");
