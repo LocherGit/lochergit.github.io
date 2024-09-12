@@ -40,20 +40,20 @@ fetch('https://danbooru.donmai.us/posts.json?tags=scenery&limit=100', { method: 
     console.log(danbooru_results[rng]);
     danbooru_results.splice(rng, 1);
   }
-  let imageContainer = document.getElementById('random-image');
-  imageContainer.src = danbooru_results[rng].media_asset.variants[2].url;
+  let linkContainer = document.getElementById('random-image');
+  linkContainer.src = danbooru_results[rng].large_file_url;
   let sourceImageContainer = document.getElementById('random-source-image');
-  sourceImageContainer.href = danbooru_results[rng].large_file_url;
+  sourceImageContainer.href = danbooru_results[rng].media_asset.variants[2].url;
 })
 .catch(error => console.log('ERROR: Initializing Danbooru results failed') );
 
 function randomizeDanbooru() {
 
   let rng = Math.floor(Math.random() * danbooru_results.length);
-  let imageContainer = document.getElementById('random-image');
-  imageContainer.src = danbooru_results[rng].media_asset.variants[2].url;
+  let linkContainer = document.getElementById('random-image');
+  linkContainer.src = danbooru_results[rng].large_file_url;
   let sourceImageContainer = document.getElementById('random-source-image');
-  sourceImageContainer.href = danbooru_results[rng].large_file_url;
+  sourceImageContainer.href = danbooru_results[rng].media_asset.variants[2].url;
 }
 function isImage(filename) {
   let extension = filename.split('.').pop();
