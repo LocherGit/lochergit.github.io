@@ -116,7 +116,6 @@ prev.onclick = function() {
     }
     loadShow();
 }
-loadShow();
 
 // Handle Rambling Items random teleport fading sequence
 const transition_fadeOut = [{opacity: 1},{opacity: 0}];
@@ -139,9 +138,6 @@ function moveDiv() {
     el.animate(transition_fadeIn, timing);
   });
 };
-
-moveDiv();
-setInterval(moveDiv, 10000);
 
 function ramblings(rambItem) {
   window.open("./ramblings/?file="+rambItem, '_blank');
