@@ -37,6 +37,11 @@
     src: url("./font/ReallyFree-ALwl7.ttf") format("truetype");
 }
 
+@font-face {
+    font-family: "MonaspaceKrypton";
+    src: url("./font/MonaspaceKrypton-Regular.otf") format("opentype");
+}
+
   
 * {
     margin: 0;
@@ -179,8 +184,12 @@ nav svg {
 .open-sidebar-button, .close-sidebar-button {
     display: flex;
     align-self: center;
-    padding: 0.5rem;
+    padding: 0.25rem 0.5rem;
 }
+.close-sidebar-button {
+    padding-bottom: 0;
+}
+
 .open-sidebar-button:hover svg, .close-sidebar-button:hover svg {
     fill: var(--light-color);
     transform: scale(1.2);
@@ -564,7 +573,7 @@ section .half {
 }
 
 .rambling-button .button {
-    padding: 0.4rem 2rem;
+    padding: 4px 2rem 5px 2rem;
     width: unset;
     line-height: unset;
     border-radius: unset;
@@ -987,6 +996,6 @@ section .half {
         max-width: 90%;
     }
     .rambling-button .button {
-        padding: 0.4rem 0.5rem;
+        padding:4px 0.5rem 5px 0.5rem;
     }
 }
