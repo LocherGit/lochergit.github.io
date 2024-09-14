@@ -1,10 +1,13 @@
 /* transcripts - markdown styling */
 * {
-  line-height: 2;
-  padding: 10px;
+  line-height: unset;
+  padding-bottom: 1.5rem;
+  margin: 0;
+  font-size: var(--24px);
+
 }
 
-h1 {
+h1, h2, h3 {
   text-align: center;
   margin-top: 0;
   font-family: "RaspberryCake", monospace, Verdana, Arial;
@@ -13,49 +16,147 @@ h1 {
   background-clip: text;
   color: transparent;
   margin: 1.5rem 0;
-  line-height: 4.5rem;
+}
+
+h2 {
+  font-size: 4rem;
+}
+
+h3 {
+  font-size: 3rem;
 }
 
 p,
-li {
+li, table {
   color: var(--light-color);
-  font-size: var(--32px);
-  text-align: left;
+  text-align: justify;
+  line-height: 2.5rem;
+}
+
+strong {
+  padding: 0px;
 }
 
 em {
-  color: #86c06c;
-  font-style: normal;
+  font-style: italic;
   padding: 0;
 }
 
-ul {
-  padding: 10px 10px 10px 20px;
+blockquote {
+  display: ruby;
+  margin: 1rem;
 }
 
-li {
-  margin-bottom: 20px;
-  list-style-type: square;
+blockquote p {
+  padding-bottom: 1.5rem;
+  display: flex;
+  font-style: italic;
+}
+
+blockquote:before {
+  content: ">";
+  color: var(--light-color);
+  font-size: var(--32px);
+  text-align: left;
+  margin-right: 1rem;
+}
+
+ul, ol {
+  margin: 0;
+  padding-left: 24px;
+}
+
+code {
+  font-family: "MonaspaceKrypton", monospace, Verdana, Arial;
+  color: white;
+  background-color: #232327;
+  padding: 5px;
+  font-size: var(--16px);
+
+}
+pre {
+  background-color: #232327;
+  padding: 5px;
+  margin-bottom: 1.5rem;
+  font-size: var(--16px);
+}
+
+pre code span {
+  font-size: var(--16px);
+}
+
+.punctuation {
+  color: #D7BA7D;
+}
+.property {
+  color: #9CDCFE;
+}
+.string {
+  color: #CE834A;
+}
+.number {
+  color: #93CEA8;
 }
 
 hr {
   padding: 0;
+  margin: 2rem 0;
 }
 
+a {
+  color: var(--accent-color-2);
+}
+
+p:has(img) {
+  width: 100%;
+  text-align: center;
+}
+p img {
+  max-width: 80%;
+}
+table, th, td {
+  border: 1px solid;
+  padding: 0.5rem;
+}
+th {
+  text-transform: uppercase;
+}
+td {
+  font-size: var(--16px);
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+}
+
+
+/* Tablet */
 @media(max-width: 69rem) {
+  * {
+    font-size: var(--16px);
+    line-height: 2rem;
+  }
   h1 {
     font-size: 4rem;
   }
-  p, li {
-    font-size: var(--24px);
+  h2 {
+    font-size: 3rem;
+  }
+  h3 {
+    font-size: 2.5rem;
   }
 }
 
+/* Mobile */
 @media(max-width: 48rem) {
   h1 {
     font-size: 3rem;
   }
-  p, li {
-    font-size: var(--16px);
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 2rem;
   }
 }
