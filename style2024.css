@@ -427,7 +427,7 @@ section .half {
 }
 
 .hide {
-    display: none;
+    display: none !important;
 }
 
 .disabled {

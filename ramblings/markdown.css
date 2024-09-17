@@ -19,10 +19,12 @@
 .markdown-body p:has(img) {
   width: 100%;
   text-align: center;
+  font-style: italic;
 }
 
-.markdown-body img {
+.markdown-body p > img {
   max-width: 80%;
+  min-width: 60%;
 }
 
 .markdown-body > p:last-of-type {
@@ -34,8 +36,8 @@
 }
 
 .markdown-body table {
-  width: 100%;
   display: table;
+  margin: auto;
 }
 
 .markdown-body table th {
@@ -48,4 +50,15 @@
 
 .markdown-body pre code span {
   font-family: "MonaspaceKrypton", monospace, Verdana, Arial;
+}
+
+.markdown-body iframe {
+  width: 100%;
+  margin: auto;
+}
+
+@media(max-width: 48rem) {
+  .markdown-body h1 {
+    font-size: var(--40px);
+  }
 }
