@@ -55,3 +55,8 @@ et dolore magna aliqua.
 - [ ] Contact the media
 
 last line
+
+
+---
+
+Human vocal cords are (in my opinion) not proficient in producing a sound that is invoked and laced in magical energy. Is there a way to produce a tool to facilitate this process to be human-friendly?
