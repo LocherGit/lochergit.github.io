@@ -23,7 +23,7 @@ The reactive combat system is established as the player's combat action is heavi
 Combat actions can essentially be reacted by choosing combat actions depending on the situation
 - Heavy attacks have a higher wait value which indicates a high risk of getting attacked without a chance to set up a defense
 - Magic attacks ignore the opponent's defense value, yet possess low defensive values in return. You plan your actions to not receive any attacks as you channel magic attacks
-- Swift dagger stabs have low effect values but also low wait values therefore these action scan be spammed or used to gauge the battle situation ahead
+- Swift dagger stabs have low effect values but also low wait values therefore these actions can be spammed or used to gauge the battle situation ahead
 
 The dynamic that the wait mechanic introduces is one of the many twists that can be found in turnbased RPGs in order to motivate reactive actions from the player so as to encourage and foster engagement.  
 This understanding is important because turnbased combat is often misunderstood as a static back and forth between player and enemy actions with the occassional need for healing.
@@ -80,14 +80,14 @@ A character's loadout consists of the following:
 - 4x usable items
 
 The combination of the chosen equipments on both hands decide the weapon's combat actions but also the **class of the character**.  
-With such a system in place, a character equipped with a sword and a shield is considered a soldier while a character equipped with two daggers is considered a blade dancer.  
+With such a system in place, a character equipped with a sword and a shield is considered a soldier while a character equipped with two daggers is considered an assassin.  
 Character classes don't have an effect on possible combat actions but they do have an effect on attribute bonuses and potential passive skills to help guide the class into specific combat behavior.  
   
 The more important gameplay aspect are the equipment types themselves.  
 **Equipment of each type have an active and a reactive combat action that is shared across all equipments of the same type.**
 - Daggers can stab or be thrown
 - Swords can swing wide or slash down
-- Sabers can thrust or deflect incoming attacks
+- Rapiers can thrust or deflect incoming attacks
 - Shields can defend the user or shove the enemy
 - Magic Wands can sling spells or channel spells onto the user
 - Pistols can shoot bullets or reload
@@ -146,11 +146,11 @@ The movement speed of the character in-combat is dependent on multiple factors.
 
 The reactive actions of each equipment can be triggered at any time although their usefulness is based on context.  
 For example, a pistol can shoot bullets but when out of ammo, it is necessary to reload the pistol using the reactive action.  
-Another example is the saber which can deflect incoming physical weapon attacks via its reactive action when executed shortly before receiving the attack. Although this won't work against any magic attacks or non-weapon attacks such as shoving, kicking and biting, deflecting an attack can nullify the attack damage with the chance of disarming the enemy in the process.
+Another example is the Rapier which can deflect incoming physical weapon attacks via its reactive action when executed shortly before receiving the attack. Although this won't work against any magic attacks or non-weapon attacks such as shoving, kicking and biting, deflecting an attack can nullify the attack damage with the chance of disarming the enemy in the process.
 
 Regardless of either active or reactive action executed, the player will be unable to use the equipment for a brief period of time although this as well is dependent on the equipment type.  
-If the shield successfully defends against an attack, the player is then able to shove the enemy via reactive action. During that timing, the player is capable of using the reactive action in succession. However, if the timing is missed then the so-called equipment cooldown is applied in which the player is unable to use the shield for a brief period of time. In this system, the player is unable to defend against attacks from multiple enemies in a short period of time with a shield alone. 
-The equipment cooldown is designed to make it unable for the player to repeatedly attack as if playing an action combat game. Each attack is carefully placed and timed and can be reacted by the enemy akin to **For Honor**. A dueling system keeps combat significant while introducing ways to make the experience dynamic and engaging.
+If the shield successfully defends against an attack, the player is then able to shove the enemy via reactive action. During that timing, the player is capable of using the reactive action in succession. However, if the timing is missed then the so-called action cooldown is applied in which the player is unable to use the shield for a brief period of time. In this system, the player is unable to defend against attacks from multiple enemies in a short period of time with a shield alone. 
+The action cooldown is designed to make it unable for the player to repeatedly attack as if playing an action combat game. Each attack is carefully placed and timed and can be reacted by the enemy akin to **For Honor**. A dueling system keeps combat significant while introducing ways to make the experience dynamic and engaging.
 
 Many intricacies of the combat system allows edge cases where the player is left without any defenses to be avoided or circumvented.  
 For example, the player is capable of using each equipment's reactive action against individual enemy attacks such as deflecting an incoming arrow while shoving another enemy. Or making use of invincibility frames that is gained while shoving an enemy to evade other enemy attacks. Or preemptively throwing a dagger at a rushing enemy in order to delay their arrival while the player deals with the present enemy first.
@@ -187,5 +187,43 @@ I hope I am able to implement such a combat system idea at some point in my life
    - Pressing the Mousebuttons while holding down CTRL will trigger the reactive actions.  
    - Q + E for cycling through the items, Spacebar for using the selected item, Tabulator for opening the Combat Menu, Escape for Pausing the game
 
+## Database
+### Equipment Actions
+| Equipment | Active Action | Reactive Action |
+| :-------: | :------------ | :-------------- |
+| Unarmed | Consecutive Punches, empowers the next unarmed active action on the other equipment slot | Charging Punch, hold down the button to charge it up and let it go to perform a charging strike that pushes the player forward | 
+| Sword | Sweep the sword horizontal into the direction of the Left Joystick.  <br>If the Left Joystick is left neutral, the sword sweep will be facing away from the player <br>Can deflect physical range attacks such as arrows | Vertical Slash down on the target
+| Axe | Vertical Slash down on the target | Vertical Uppercut, exposes weakspots when used against a defending enemy.
+| Dagger | Swift Stab, halves its action cooldown upon successful attack | While the button is held, aim with the Left Joystick. Upon button release, throw the dagger into that direction.  <br>This action will unequip the dagger. Automatically reequip the dagger after combat or upon picking it up from the ground. Can deflect physical range attacks such as arrows.
+|Club|Hit the enemy into the direction of the Left Joystick.<br>If the Left Joystick is left neutral, the sword sweep will be facing away from the player <br> If the attack is unblocked, pushes the target into the direction of the attack. | Charging Strike, hold down the button to charge it up and let it go to perform a charged strike into the the direction of the Left Joystick.<br>If the attack hits the defending target, exposes the enemy. |
+|Spear| Thrust the spear at the target. If the button is held, it is possible to manually aim with the use of the Left Joystick. Can deflect physical range attacks such as arrows | Spear Lunge at the target that can push the enemy back if the attack is not defended.
+| Rapier | Rapier Thrust at the target | Deflection Maneuver, can deflect any physical attacks. If the physical attack is in melee range, can disarm the enemy depending on the enemy's grip value.
+|Shield| Hold the Shield to defend against incoming physical or magical attacks from the front | If an attack connected with the shield's active action, using the reactive action will shove the player forward. If the shove hits any enemy, their action cooldown doubles
+|Crossbow| Shoots a bolt at the target. Can be aimed with the Left Joystick if the button is held.<br>Can deflect physical range attacks such as arrows<br> If the bolt hits a structure immediately after hitting any target, bind the target to the structure | Reloads the crossbow |
+|Pistol| Shoots a bullet at the target. Can be aimed with the Left Joystick if the button is held.<br>Can deflect physical range attacks such as arrows | Reloads the pistol |
+| Wand | Shoots a magical bolt towards the target. Use the Left Joystick to determine the magical element | Channels magical power to increase the recovery of magic power |
+| Tome | Places a static magical space around the target that inflicts an effect over time. Use the Left Joystick to determine the magical space property. | Infuses the user with a temporary effect that is determined by the equipped tome |
+
+
+### Some Class Combinations
+| Equipment A | Equipment B | Class | Class Bonus |
+| :---------: | :---------: | :---: | :---------- |
+| Sword | Sword | Sword Dancer | If an active action hits the enemy during their attack animation, deflect the enemy attack |
+| Sword | Shield | Soldier | Movement speed is not reduced when wearing heavy armor, user cannot be flanked |
+| Sword | Axe | Barbarian | Increases overall damage deviation, defeating a target temporarily increases damage |
+| Spear | Shield | Hoplite | Upon defending a physical attack, increases the next physical attack |
+| Dagger | Dagger | Assassin | Inflicted damage have percentage-based armor penetration |
+| Rapier | Sword<br>Wand<br>Pistol | Counter Blade<br>Counter Mage<br>Counter Shot | Inflict increased damage for a brief time against enemies whose attacks had been deflected. |
+| Rapier | Tome | Spell Fencer | Magical spaces created by the tome are no longer static and follows the user, the user no longer receives damage from their own magical space |
+|Rapier|Axe|Pirate|User is immune to some ground-hazards and gains a movement speed bonus when standing on wet surfaces|
+|Rapier|Dagger|Duelist||
+|Spear|Axe|Gladiator|Decreases damage taken from target, increases damage against the target|
+|Wand|Tome|Wizard/Sorceress|Gain information about currently channelled spells and their invoker, spells cancel the target's invoked spells on hit. |
+|Tome|Tome| Archmage | Increases the effect of magical spaces the more it is casted onto the same location, magical spaces can stack.|
+|Pistol|Pistol|Gunslinger|Halves action delay when pistols are shot alternately. Halves reload cooldown when both pistols are out of ammo.|
+|Dagger|Crossbow|Hunter/Huntress|Increases movementspeed when the target's health is below 50%|
+|Club|Shield|Paladin|Club gains a glowing effect that does increased damage against undead creatures and the shield can also block magical attacks. Successful blocking heals the user instead|
+|Dagger|Wand|Blade Invoker|Daggers are infused with a magical element, the wand's reactive action is replaced with the ability to teleport the thrown dagger back to the user|
+|Club|Tome|Necromancer|Magical spaces summons familiars and undead creatures (if placed onto locations of recently departed characters)|
 
 written on 17th September 2024
