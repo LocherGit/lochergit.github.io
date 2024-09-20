@@ -125,13 +125,39 @@ const ramblingItems = document.getElementsByClassName("rambling-item");
 const ramblingArray = Array.from(ramblingItems);
 const boundingBox = document.getElementById("ramblings").getBoundingClientRect();
 function moveDiv() {
+  let placedDivs = [];
   ramblingArray.forEach(el => {
     el.animate(transition_fadeOut, timing);
     let itemBox = el.getBoundingClientRect();
+
     var maxLeft = boundingBox.width - itemBox.width;
     var maxTop = boundingBox.height - itemBox.height;
-    var leftPos = Math.floor(Math.random() * (maxLeft + 1))
-    var topPos = Math.floor(Math.random() * (maxTop + 1))
+    var leftPos = Math.floor(Math.random() * (maxLeft + 1));
+    var topPos = Math.floor(Math.random() * (maxTop + 1));
+
+    let randRect = new Rect(topPos, leftPos, itemBox.width, itemBox.height);
+    randRect.is = new AABB(randRect);
+    for(let x = 0; x < 20; x++){
+      let breakout = true;
+      if( placedDivs.length > 0 ) {
+        for( let i = 0; i < placedDivs.length; i++ ) {
+          if( randRect.is.colliding(placedDivs[i]) ) {
+            breakout = false;
+            break;
+          }
+        }
+      }
+      if( breakout ) {
+        break;
+      } else {
+        leftPos = Math.floor(Math.random() * (maxLeft + 1));
+        topPos = Math.floor(Math.random() * (maxTop + 1));
+        randRect = new Rect(topPos, leftPos, itemBox.width, itemBox.height);
+        randRect.is = new AABB(randRect);
+      }
+    }
+    
+    placedDivs.push(randRect);
     el.style.left = leftPos;
     el.style.top = topPos;
     el.setAttribute('style', "left: " + leftPos + "px; top:" + topPos + "px");
