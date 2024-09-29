@@ -16,7 +16,7 @@
   padding: 1rem;
 }
 
-.markdown-body p:has(img) {
+.markdown-body p:has(img), .markdown-body video + p {
   width: 100%;
   text-align: center;
   font-style: italic;
@@ -26,6 +26,12 @@
   max-width: 80%;
   min-width: 60%;
 }
+
+.markdown-body video {
+  display: block;
+  margin: 0 auto;
+}
+
 
 .markdown-body p, .markdown-body li {
   text-align: justify;
@@ -64,5 +70,8 @@
 @media(max-width: 48rem) {
   .markdown-body h1 {
     font-size: var(--40px);
+  }
+  .markdown-body video {
+    width: 100%;
   }
 }
